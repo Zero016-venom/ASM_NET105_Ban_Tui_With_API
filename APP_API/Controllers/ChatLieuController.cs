@@ -52,6 +52,9 @@ namespace APP_API.Controllers
             {
                 ChatLieu? matchingChatLieu = _db.ChatLieu.FirstOrDefault(temp => temp.ID_ChatLieu == chatLieu.ID_ChatLieu);
 
+                if (matchingChatLieu == null)
+                    throw new ArgumentNullException(nameof(matchingChatLieu));
+
                 matchingChatLieu.TenChatLieu = chatLieu.TenChatLieu;
                 matchingChatLieu.MoTa = chatLieu.MoTa;
                 _db.ChatLieu.Update(matchingChatLieu);
@@ -70,6 +73,9 @@ namespace APP_API.Controllers
             try
             {
                 ChatLieu? matchingChatLieu = _db.ChatLieu.FirstOrDefault(temp => temp.ID_ChatLieu == id);
+                if (matchingChatLieu == null)
+                    throw new ArgumentNullException(nameof(matchingChatLieu));
+
                 _db.ChatLieu.Remove(matchingChatLieu);
                 _db.SaveChanges();
                 return Ok();

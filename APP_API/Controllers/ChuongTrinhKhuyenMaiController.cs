@@ -1,6 +1,5 @@
 ﻿using APP_DATA.DatabaseContext;
-using ASM_NET105_BanTui.Core.Domain.Models;
-using Microsoft.AspNetCore.Http;
+using APP_DATA.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APP_API.Controllers

@@ -1,6 +1,11 @@
-var builder = WebApplication.CreateBuilder(args);
+using APP_VIEW.IServices;
+using APP_VIEW.Services;
 
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddHttpClient();
 // Add services to the container.
+builder.Services.AddTransient<IChatLieuService, ChatLieuService>();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

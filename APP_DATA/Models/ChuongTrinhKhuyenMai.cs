@@ -1,7 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ASM_NET105_BanTui.Core.Domain.Models
+namespace APP_DATA.Models
 {
     public class ChuongTrinhKhuyenMai
     {

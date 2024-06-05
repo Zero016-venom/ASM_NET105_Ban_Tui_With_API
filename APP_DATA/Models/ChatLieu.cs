@@ -1,6 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ASM_NET105_BanTui.Core.Domain.Models;
+using System.ComponentModel.DataAnnotations;
 
-namespace ASM_NET105_BanTui.Core.Domain.Models
+namespace APP_DATA.Models
 {
     public class ChatLieu
     {

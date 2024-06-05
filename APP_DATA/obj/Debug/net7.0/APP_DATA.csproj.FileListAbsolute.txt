@@ -1,0 +1,14 @@
+C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_DATA\obj\Debug\net7.0\APP_DATA.csproj.AssemblyReference.cache
+C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_DATA\obj\Debug\net7.0\APP_DATA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_DATA\obj\Debug\net7.0\APP_DATA.AssemblyInfoInputs.cache
+C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_DATA\obj\Debug\net7.0\APP_DATA.AssemblyInfo.cs
+C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_DATA\obj\Debug\net7.0\APP_DATA.csproj.CoreCompileInputs.cache
+C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_DATA\bin\Debug\net7.0\APP_DATA.deps.json
+C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_DATA\bin\Debug\net7.0\APP_DATA.runtimeconfig.json
+C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_DATA\bin\Debug\net7.0\APP_DATA.dll
+C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_DATA\bin\Debug\net7.0\APP_DATA.pdb
+C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_DATA\obj\Debug\net7.0\APP_DATA.dll
+C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_DATA\obj\Debug\net7.0\refint\APP_DATA.dll
+C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_DATA\obj\Debug\net7.0\APP_DATA.pdb
+C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_DATA\obj\Debug\net7.0\APP_DATA.genruntimeconfig.cache
+C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_DATA\obj\Debug\net7.0\ref\APP_DATA.dll

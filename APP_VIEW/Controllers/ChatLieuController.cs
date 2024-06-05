@@ -1,4 +1,5 @@
-﻿using APP_DATA.Models;
+﻿using APP_DATA.DTO;
+using APP_DATA.Models;
 using APP_VIEW.IServices;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,34 +14,35 @@ namespace APP_VIEW.Controllers
             _iChatLieuService = ichatLieuService;
         }
 
-        public IActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            List<ChatLieu> chatLieus = _iChatLieuService.GetAllChatLieu();
+            List<ChatLieuResponse> chatLieus = await _iChatLieuService.GetAllChatLieu();
             return View(chatLieus);
         }
 
-        public IActionResult Details(Guid id)
+        public IActionResult Create()
         {
-            ChatLieu? matchingChatLieu = _iChatLieuService.GetChatLieuById(id);
-            return View(matchingChatLieu);
-        }
-
-        public IActionResult Create(ChatLieu chatLieu)
-        {
-            return View(chatLieu);
+            return View();
         }
 
         [HttpPost]
-        public IActionResult CreateChatLieu(ChatLieu chatLieu)
+        public async Task<IActionResult> Create(ChatLieuAddRequest chatLieuAddRequest)
         {
-            _iChatLieuService.CreateChatLieu(chatLieu);
-            return View(chatLieu);
+            ChatLieuResponse chatLieuResponse = await _iChatLieuService.AddChatLieu(chatLieuAddRequest);
+            return RedirectToAction("Index");
         }
 
-        public IActionResult Edit(Guid id)
+        public async Task<IActionResult> Edit(Guid id)
         {
-            ChatLieu matchingChatLieu = _iChatLieuService.GetChatLieuById(id);
-            return View(matchingChatLieu);
+            ChatLieuResponse? chatLieuResponse = await _iChatLieuService.GetChatLieuById(id);
+            if (chatLieuResponse == null)
+                return RedirectToAction("Index");
+
+            ChatLieuUpdateRequest chatLieuUpdateRequest  = chatLieuResponse.ToChatLieuUpdateRequest();
+
+            List<ChatLieuResponse> chatLieus = await _iChatLieuService.GetAllChatLieu();
+
+            return View(chatLieuUpdateRequest);
         }
 
         [HttpPost]

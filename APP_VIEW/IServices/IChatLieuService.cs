@@ -1,17 +1,18 @@
-﻿using APP_DATA.Models;
+﻿using APP_DATA.DTO;
+using APP_DATA.Models;
 
 namespace APP_VIEW.IServices
 {
     public interface IChatLieuService
     {
-        List<ChatLieu> GetAllChatLieu();
+        Task<List<ChatLieuResponse>> GetAllChatLieu();
 
-        ChatLieu GetChatLieuById(Guid id);
+        Task<ChatLieuResponse?> GetChatLieuById(Guid? id);
 
-        bool CreateChatLieu(ChatLieu chatLieu);
+        Task<ChatLieuResponse> AddChatLieu(ChatLieuAddRequest? chatLieuAddRequest);
 
-        bool UpdateChatLieu(ChatLieu chatLieu);
+        Task<ChatLieuResponse> UpdateChatLieu(ChatLieu chatLieu);
 
-        bool DeleteChatLieu(Guid id);
+        bool DeleteChatLieu(Guid? id);
     }
 }

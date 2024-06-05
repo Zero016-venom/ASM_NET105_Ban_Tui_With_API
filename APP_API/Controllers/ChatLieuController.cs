@@ -1,4 +1,5 @@
 ﻿using APP_DATA.DatabaseContext;
+using APP_DATA.DTO;
 using APP_DATA.Models;
 using ASM_NET105_BanTui.Core.Domain.Models;
 using Microsoft.AspNetCore.Http;
@@ -24,18 +25,24 @@ namespace APP_API.Controllers
             return Ok(_db.ChatLieu.ToList());
         }
 
-        [HttpGet("get-hat-lieu-by-id")]
+        [HttpGet("get-chat-lieu-by-id")]
         public ActionResult GetChatLieuById(Guid id)
         {
             return Ok(_db.ChatLieu.FirstOrDefault(temp => temp.ID_ChatLieu == id));
         }
 
         [HttpPost("create-chat-lieu")]
-        public ActionResult CreateChatLieu(ChatLieu chatLieu)
+        public ActionResult CreateChatLieu(ChatLieuAddRequest chatLieuAddRequest)
         {
             try
             {
-                chatLieu.ID_ChatLieu = Guid.NewGuid();
+                ChatLieu? chatLieu = new ChatLieu()
+                {
+                    ID_ChatLieu = Guid.NewGuid(),
+                    TenChatLieu = chatLieuAddRequest.TenChatLieu,
+                    MoTa = chatLieuAddRequest.MoTa,
+                    TrangThai = chatLieuAddRequest.TrangThai.ToString()
+                };
                 _db.ChatLieu.Add(chatLieu);
                 _db.SaveChanges();
                 return Ok();

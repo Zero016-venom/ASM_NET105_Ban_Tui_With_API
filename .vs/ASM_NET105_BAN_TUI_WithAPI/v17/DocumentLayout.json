@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{882AC30B-E3A1-4108-B8FB-B18CA681FAE5}|APP_API\\APP_API.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_api\\controllers\\phuongthucthanhtoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{882AC30B-E3A1-4108-B8FB-B18CA681FAE5}|APP_API\\APP_API.csproj|solutionrelative:app_api\\controllers\\phuongthucthanhtoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{882AC30B-E3A1-4108-B8FB-B18CA681FAE5}|APP_API\\APP_API.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_api\\controllers\\chuongtrinhkhuyenmaicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{882AC30B-E3A1-4108-B8FB-B18CA681FAE5}|APP_API\\APP_API.csproj|solutionrelative:app_api\\controllers\\chuongtrinhkhuyenmaicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PhuongThucThanhToanController.cs",
-              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_API\\Controllers\\PhuongThucThanhToanController.cs",
-              "RelativeDocumentMoniker": "APP_API\\Controllers\\PhuongThucThanhToanController.cs",
-              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_API\\Controllers\\PhuongThucThanhToanController.cs",
-              "RelativeToolTip": "APP_API\\Controllers\\PhuongThucThanhToanController.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAADgv0kAAAANAAAA",
+              "Title": "ChuongTrinhKhuyenMaiController.cs",
+              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_API\\Controllers\\ChuongTrinhKhuyenMaiController.cs",
+              "RelativeDocumentMoniker": "APP_API\\Controllers\\ChuongTrinhKhuyenMaiController.cs",
+              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_API\\Controllers\\ChuongTrinhKhuyenMaiController.cs",
+              "RelativeToolTip": "APP_API\\Controllers\\ChuongTrinhKhuyenMaiController.cs",
+              "ViewState": "AQIAADgAAADAmZmZmbkwwE8AAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T04:18:41.517Z",
+              "WhenOpened": "2024-06-05T04:23:05.081Z",
               "EditorCaption": ""
             }
           ]

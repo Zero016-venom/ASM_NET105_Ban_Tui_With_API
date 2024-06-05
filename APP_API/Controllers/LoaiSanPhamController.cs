@@ -7,11 +7,11 @@ namespace APP_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LoaiSanPhamCcontroller : ControllerBase
+    public class LoaiSanPhamController : ControllerBase
     {
         AppDbContext _db;
 
-        public LoaiSanPhamCcontroller(AppDbContext db)
+        public LoaiSanPhamController(AppDbContext db)
         {
             _db = db;
         }

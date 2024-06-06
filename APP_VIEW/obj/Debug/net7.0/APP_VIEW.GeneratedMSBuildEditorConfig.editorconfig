@@ -22,12 +22,32 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdExpZXVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/ChatLieu/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdExpZXVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/ChatLieu/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdExpZXVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/ChatLieu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdExpZXVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Hang/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Hang/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Hang/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Hang/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Home/Index.cshtml]

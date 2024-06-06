@@ -1,0 +1,49 @@
+﻿@model IEnumerable<APP_DATA.DTO.HangResponse>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Danh sách hãng</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Tạo mới</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Tên Hãng")
+            </th>
+            <th>
+                @Html.DisplayName("Mô tả")
+            </th>
+            <th>
+                @Html.DisplayName("Trạng thái")
+            </th>
+            <th>
+                Chức năng
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenHang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoTa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrangThai)
+            </td>
+                <td>
+                    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.ID_Hang }, new { @class = "btn btn-warning" })
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.ID_Hang }, new { @class = "btn btn-info" })
+                    @* @Html.ActionLink("Delete", "Delete", new { id = item.ID_ChatLieu }, new { @class = "btn btn-danger" }) *@
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

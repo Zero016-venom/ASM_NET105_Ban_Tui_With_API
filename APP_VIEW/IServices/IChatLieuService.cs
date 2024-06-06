@@ -11,8 +11,8 @@ namespace APP_VIEW.IServices
 
         Task<ChatLieuResponse> AddChatLieu(ChatLieuAddRequest? chatLieuAddRequest);
 
-        Task<ChatLieuResponse> UpdateChatLieu(ChatLieu chatLieu);
+        Task<ChatLieuResponse> UpdateChatLieu(ChatLieuUpdateRequest? chatLieuUpdateRequest);
 
-        bool DeleteChatLieu(Guid? id);
+        Task<bool> DeleteChatLieu(Guid? id);
     }
 }

@@ -11,6 +11,7 @@ builder.Services.AddHttpClient();
 // Add services to the container.
 builder.Services.AddTransient<IChatLieuService, ChatLieuService>();
 builder.Services.AddTransient<ILoaiSanPhamService, LoaiSanPhamService>();
+builder.Services.AddTransient<IChuongTrinhKhuyenMaiService, ChuongTrinhKhuyenMaiService>();
 builder.Services.AddTransient<IUserService, UserService>();
 
 

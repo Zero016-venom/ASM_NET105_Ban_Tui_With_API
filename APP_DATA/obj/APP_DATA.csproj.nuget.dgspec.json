@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_DATA\\APP_DATA.csproj": {}
+    "D:\\FPT Polytechnic\\API_ASM_NET105\\APP_DATA\\APP_DATA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_DATA\\APP_DATA.csproj": {
+    "D:\\FPT Polytechnic\\API_ASM_NET105\\APP_DATA\\APP_DATA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_DATA\\APP_DATA.csproj",
+        "projectUniqueName": "D:\\FPT Polytechnic\\API_ASM_NET105\\APP_DATA\\APP_DATA.csproj",
         "projectName": "APP_DATA",
-        "projectPath": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_DATA\\APP_DATA.csproj",
-        "packagesPath": "C:\\Users\\hviet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_DATA\\obj\\",
+        "projectPath": "D:\\FPT Polytechnic\\API_ASM_NET105\\APP_DATA\\APP_DATA.csproj",
+        "packagesPath": "C:\\Users\\nqkha\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT Polytechnic\\API_ASM_NET105\\APP_DATA\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\hviet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nqkha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

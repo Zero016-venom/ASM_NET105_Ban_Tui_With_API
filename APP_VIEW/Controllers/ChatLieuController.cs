@@ -41,18 +41,12 @@ namespace APP_VIEW.Controllers
         public async Task<IActionResult> Edit(Guid id)
         {
             ChatLieuResponse? chatLieuResponse = await _iChatLieuService.GetChatLieuById(id);
-            if (chatLieuResponse == null)
-                return RedirectToAction("Index");
-
-            ChatLieuUpdateRequest chatLieuUpdateRequest  = chatLieuResponse.ToChatLieuUpdateRequest();
-
-            List<ChatLieuResponse> chatLieus = await _iChatLieuService.GetAllChatLieu();
-
-            return View(chatLieuUpdateRequest);
+            if (chatLieuResponse == null) return RedirectToAction("Index");
+            return View(chatLieuResponse);
         }
 
         [HttpPost]
-        public ActionResult EditChatLieu(ChatLieuUpdateRequest chatLieuUpdateRequest)
+        public ActionResult Edit(ChatLieuUpdateRequest chatLieuUpdateRequest)
         {
             _iChatLieuService.UpdateChatLieu(chatLieuUpdateRequest);
             return RedirectToAction("Index");

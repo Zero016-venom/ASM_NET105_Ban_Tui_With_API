@@ -51,15 +51,24 @@ namespace APP_VIEW.Services
 
         public async Task<ChatLieuResponse> GetChatLieuById(Guid? id)
         {
-            string requestURL = $"https://localhost:7073/api/ChatLieu/get-by-id?id={id}";
+            string requestURL = $"https://localhost:7073/api/ChatLieu/get-chat-lieu-by-id?id={id}";
             var response = await _httpClient.GetStringAsync(requestURL);
-            ChatLieuResponse chatLieu = JsonConvert.DeserializeObject<ChatLieuResponse>(response);
-            return chatLieu;
+            ChatLieuResponse chatLieuResponse = JsonConvert.DeserializeObject<ChatLieuResponse>(response);
+            return chatLieuResponse;
         }
 
-        public Task<ChatLieuResponse> UpdateChatLieu(ChatLieuUpdateRequest? chatLieuUpdateRequest)
+        public async Task<ChatLieuResponse> UpdateChatLieu(ChatLieuUpdateRequest? chatLieuUpdateRequest)
         {
-            throw new NotImplementedException();
+            if (chatLieuUpdateRequest == null)
+                throw new ArgumentNullException(nameof(chatLieuUpdateRequest));
+
+            ChatLieu chatLieu = chatLieuUpdateRequest.ToChatLieu();
+            //chatLieu.ID_ChatLieu = Guid.NewGuid();
+
+            var requestUrl = "https://localhost:7073/api/ChatLieu/update-chat-lieu";
+
+            var response = _httpClient.PutAsJsonAsync(requestUrl, chatLieuUpdateRequest).Result;
+            return chatLieu.ToChatLieuResponse();
         }
     }
 }

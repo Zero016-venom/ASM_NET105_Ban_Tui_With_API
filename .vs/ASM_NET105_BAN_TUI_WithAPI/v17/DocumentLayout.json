@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_view\\services\\chatlieuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\services\\chatlieuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_view\\controllers\\chatlieucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\controllers\\chatlieucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_view\\views\\chatlieu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\views\\chatlieu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ChatLieuService.cs",
-              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Services\\ChatLieuService.cs",
-              "RelativeDocumentMoniker": "APP_VIEW\\Services\\ChatLieuService.cs",
-              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Services\\ChatLieuService.cs",
-              "RelativeToolTip": "APP_VIEW\\Services\\ChatLieuService.cs",
-              "ViewState": "AQIAAA0AAACAX2ZmZmYowBwAAABeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T17:11:38.776Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ChatLieuController.cs",
-              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Controllers\\ChatLieuController.cs",
-              "RelativeDocumentMoniker": "APP_VIEW\\Controllers\\ChatLieuController.cs",
-              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Controllers\\ChatLieuController.cs",
-              "RelativeToolTip": "APP_VIEW\\Controllers\\ChatLieuController.cs",
-              "ViewState": "AQIAAA0AAAAAKDMzMzMJwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T17:11:32.25Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Views\\ChatLieu\\Index.cshtml",
+              "RelativeDocumentMoniker": "APP_VIEW\\Views\\ChatLieu\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Views\\ChatLieu\\Index.cshtml",
+              "RelativeToolTip": "APP_VIEW\\Views\\ChatLieu\\Index.cshtml",
+              "ViewState": "AQIAABYAAADALjMzM7MiwC0AAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-07T14:27:49.375Z",
               "EditorCaption": ""
             }
           ]

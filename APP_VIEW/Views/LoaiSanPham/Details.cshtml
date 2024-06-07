@@ -1,35 +1,38 @@
-﻿@model APP_DATA.DTO.ChatLieuResponse
+﻿@model APP_DATA.DTO.LoaiSanPhamResponse
 
 @{
     ViewData["Title"] = "Details";
 }
 
-<h3>Chi tiết chất liệu</h3>
+<h3>Chi tiết loại sản phẩm</h3>
 
 <div>
     <hr />
     <dl class="row">
+
         <dt class="col-sm-2">
-            @Html.DisplayName("Tên chất liệu")
+            @Html.DisplayName("Tên loại sản phẩm")
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.TenChatLieu)
+            @Html.DisplayFor(model => model.TenLoaiSP)
         </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayName("Mô tả")
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.MoTa)
         </dd>
+
         <dt class="col-sm-2">
-            @Html.DisplayName("Trạng thái")
+            @Html.DisplayName("Loại sản phẩm")
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.TrangThai)
         </dd>
     </dl>
-</div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_ChatLieu }) |
-    <a asp-action="Index">Back to List</a>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.ID_LoaiSP" class="btn btn-warning">Chỉnh sửa</a> |
+        <a asp-action="Index">Quay lại trang danh sách loại sản phẩm</a>
+    </div>
 </div>

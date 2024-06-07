@@ -1,4 +1,5 @@
 ﻿using APP_DATA.DatabaseContext;
+using APP_DATA.DTO;
 using APP_DATA.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -29,12 +30,18 @@ namespace APP_API.Controllers
         }
 
         [HttpPost("create-mau")]
-        public ActionResult CreateMau(MauSac mauSac)
+        public ActionResult CreateMau(MauSacAddRequest ms)
         {
             try
             {
-                mauSac.ID_MauSac = Guid.NewGuid();
-                _db.MauSac.Add(mauSac);
+                MauSac? mau = new MauSac()
+                {
+                    ID_MauSac = Guid.NewGuid(),
+                    TenMauSac = ms.TenMauSac,
+                    MoTa = ms.MoTa,
+                    TrangThai = ms.TrangThai
+                };
+                _db.MauSac.Add(mau);
                 _db.SaveChanges();
                 return Ok();
             }
@@ -45,20 +52,20 @@ namespace APP_API.Controllers
         }
 
         [HttpPut("update-mau")]
-        public ActionResult UpdateMau(MauSac mauSac)
+        public ActionResult UpdateMau(MauSacUpdateRequest msu)
         {
             try
             {
-                MauSac? matchingMau = _db.MauSac.FirstOrDefault(temp=>temp.ID_MauSac == mauSac.ID_MauSac);
+                MauSac? matchingMau = _db.MauSac.FirstOrDefault(t => t.ID_MauSac == msu.ID_MauSac);
 
                 if (matchingMau == null)
                     throw new ArgumentNullException(nameof(matchingMau));
-                matchingMau.TenMauSac = mauSac.TenMauSac;
-                matchingMau.MoTa = mauSac.MoTa;
-                matchingMau.TrangThai = mauSac.TrangThai;
-
-                _db.MauSac.Update(mauSac);
+                matchingMau.TenMauSac = msu.TenMauSac;
+                matchingMau.MoTa = msu.MoTa;
+                matchingMau.TrangThai = msu.TrangThai;
+                _db.MauSac.Update(matchingMau);
                 _db.SaveChanges();
+
                 return Ok();
             }
             catch (Exception)
@@ -76,9 +83,10 @@ namespace APP_API.Controllers
 
                 if (matchingMau == null)
                     throw new ArgumentNullException(nameof(matchingMau));
-               
+
                 _db.MauSac.Remove(matchingMau);
                 _db.SaveChanges();
+
                 return Ok();
             }
             catch (Exception)

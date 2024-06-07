@@ -37,8 +37,15 @@
                     @Html.DisplayFor(modelItem => item.MoTa)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.TrangThai)
-                </td>
+                    @if(item.TrangThai == StatusOptions.Active.ToString())
+                    {
+                        <span class="badge bg-success">Hoạt động</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Không hoạt động</span>    
+                    }
+                    </td>
                 <td>
                     @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.ID_ChatLieu }, new { @class = "btn btn-warning" })
                     @Html.ActionLink("Chi tiết", "Details", new { id = item.ID_ChatLieu }, new { @class = "btn btn-info" })

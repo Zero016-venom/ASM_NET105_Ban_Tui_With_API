@@ -1,4 +1,5 @@
 ﻿using APP_DATA.DatabaseContext;
+using APP_DATA.DTO;
 using APP_DATA.Models;
 using ASM_NET105_BanTui.Core.Domain.Models;
 using Microsoft.AspNetCore.Http;
@@ -26,18 +27,24 @@ namespace APP_API.Controllers
         [HttpGet("get-loai-san-pham-by-id")]
         public ActionResult GetLoaiSanPhamById(Guid id)
         {
-            return Ok(_db.LoaiSP.FirstOrDefault(temp=>temp.ID_LoaiSP == id));
+            return Ok(_db.LoaiSP.FirstOrDefault(temp => temp.ID_LoaiSP == id));
         }
 
         [HttpPost("create-loai-san-pham")]
-        public ActionResult CreateLoaiSanPham(LoaiSP loaiSanPham)
+        public ActionResult CreateLoaiSanPham(LoaiSanPhamAddRequest loaiSanPhamAddRequest)
         {
             try
             {
-                loaiSanPham.ID_LoaiSP = Guid.NewGuid();
+                LoaiSP loaiSanPham = new LoaiSP()
+                {
+                    ID_LoaiSP = Guid.NewGuid(),
+                    TenLoaiSP = loaiSanPhamAddRequest.TenLoaiSP,
+                    MoTa = loaiSanPhamAddRequest.MoTa,
+                    TrangThai = loaiSanPhamAddRequest.TrangThai.ToString()
+                };
+
                 _db.LoaiSP.Add(loaiSanPham);
                 _db.SaveChanges();
-
                 return Ok();
             }
             catch (Exception)
@@ -47,17 +54,17 @@ namespace APP_API.Controllers
         }
 
         [HttpPut("update-loai-san-pham")]
-        public ActionResult UpdateLoaiSanPham(LoaiSP loaiSanPham)
+        public ActionResult UpdateLoaiSanPham(LoaiSanPhamUpdateRequest loaiSanPhamUpdateRequest)
         {
             try
             {
-                LoaiSP? mathingLoaiSanPham = _db.LoaiSP.FirstOrDefault(temp => temp.ID_LoaiSP == loaiSanPham.ID_LoaiSP);
+                LoaiSP? mathingLoaiSanPham = _db.LoaiSP.FirstOrDefault(temp => temp.ID_LoaiSP == loaiSanPhamUpdateRequest.ID_LoaiSP);
                 if (mathingLoaiSanPham == null)
                     throw new ArgumentNullException(nameof(mathingLoaiSanPham));
 
-                mathingLoaiSanPham.TenLoaiSP = loaiSanPham.TenLoaiSP;
-                mathingLoaiSanPham.MoTa = loaiSanPham.MoTa;
-                mathingLoaiSanPham.TrangThai = loaiSanPham.TrangThai;
+                mathingLoaiSanPham.TenLoaiSP = loaiSanPhamUpdateRequest.TenLoaiSP;
+                mathingLoaiSanPham.MoTa = loaiSanPhamUpdateRequest.MoTa;
+                mathingLoaiSanPham.TrangThai = loaiSanPhamUpdateRequest.TrangThai.ToString();
 
                 _db.LoaiSP.Update(mathingLoaiSanPham);
                 _db.SaveChanges();

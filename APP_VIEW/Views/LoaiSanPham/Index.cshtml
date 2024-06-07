@@ -1,0 +1,52 @@
+﻿@model IEnumerable<APP_DATA.DTO.LoaiSanPhamResponse>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Danh sách loại sản phẩm</h3>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Tạo mới</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tên loại sản phẩm</th>
+            <th>Mô tả</th>
+            <th>Trạng thái</th>
+            <th>Chức năng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenLoaiSP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MoTa)
+                </td>
+                <td>
+                    @if (item.TrangThai == StatusOptions.Active.ToString())
+                    {
+                        <span class="badge bg-success">Hoạt động</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Không hoạt động</span>
+                    }
+                </td>
+                </td>
+                <td>
+                <td>
+                    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.ID_LoaiSP }, new { @class = "btn btn-warning" })
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.ID_LoaiSP }, new { @class = "btn btn-info" })
+                    @* @Html.ActionLink("Delete", "Delete", new { id = item.ID_LoaiSP }, new { @class = "btn btn-danger" }) *@
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

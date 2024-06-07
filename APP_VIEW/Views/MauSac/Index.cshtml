@@ -1,0 +1,53 @@
+﻿@model IEnumerable<APP_DATA.DTO.MauSacResponse>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_MauSac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenMauSac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MoTa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrangThai)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_MauSac)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenMauSac)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoTa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrangThai)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.ID_MauSac }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID_MauSac }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID_MauSac })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

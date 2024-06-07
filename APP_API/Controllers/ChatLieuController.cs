@@ -54,17 +54,19 @@ namespace APP_API.Controllers
         }
 
         [HttpPut("update-chat-lieu")]
-        public ActionResult UpdateChatLieu(ChatLieu chatLieu)
+        public ActionResult UpdateChatLieu(ChatLieuUpdateRequest chatLieuUpdateRequest)
         {
             try
             {
-                ChatLieu? matchingChatLieu = _db.ChatLieu.FirstOrDefault(temp => temp.ID_ChatLieu == chatLieu.ID_ChatLieu);
+                ChatLieu? matchingChatLieu = _db.ChatLieu.FirstOrDefault(temp => temp.ID_ChatLieu == chatLieuUpdateRequest.ID_ChatLieu);
 
                 if (matchingChatLieu == null)
                     throw new ArgumentNullException(nameof(matchingChatLieu));
 
-                matchingChatLieu.TenChatLieu = chatLieu.TenChatLieu;
-                matchingChatLieu.MoTa = chatLieu.MoTa;
+                matchingChatLieu.TenChatLieu = chatLieuUpdateRequest.TenChatLieu;
+                matchingChatLieu.MoTa = chatLieuUpdateRequest.MoTa;
+                matchingChatLieu.TrangThai = chatLieuUpdateRequest.TrangThai.ToString();
+
                 _db.ChatLieu.Update(matchingChatLieu);
                 _db.SaveChanges();
                 return Ok();

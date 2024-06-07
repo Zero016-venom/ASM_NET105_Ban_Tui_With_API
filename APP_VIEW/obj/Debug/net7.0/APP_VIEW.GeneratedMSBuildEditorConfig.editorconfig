@@ -9,63 +9,83 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = APP_VIEW
 build_property.RootNamespace = APP_VIEW
-build_property.ProjectDir = D:\FPT Polytechnic\ASM_NET105_Ban_Tui_With_API\APP_VIEW\
+build_property.ProjectDir = C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_VIEW\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\FPT Polytechnic\ASM_NET105_Ban_Tui_With_API\APP_VIEW
+build_property.MSBuildProjectDirectory = C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_VIEW
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/FPT Polytechnic/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/ChatLieu/Create.cshtml]
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/ChatLieu/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdExpZXVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPT Polytechnic/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/ChatLieu/Edit.cshtml]
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/ChatLieu/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdExpZXVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/ChatLieu/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdExpZXVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPT Polytechnic/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/ChatLieu/Index.cshtml]
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/ChatLieu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdExpZXVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPT Polytechnic/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/Home/Index.cshtml]
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Hang/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Hang/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Hang/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Hang/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPT Polytechnic/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/Home/Privacy.cshtml]
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPT Polytechnic/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/Shared/Error.cshtml]
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPT Polytechnic/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPT Polytechnic/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/TaiKhoan/Index.cshtml]
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/TaiKhoan/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFpS2hvYW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPT Polytechnic/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/TaiKhoan/Login.cshtml]
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/TaiKhoan/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFpS2hvYW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPT Polytechnic/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/TaiKhoan/Register.cshtml]
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/TaiKhoan/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFpS2hvYW5cUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPT Polytechnic/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/_ViewImports.cshtml]
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPT Polytechnic/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/_ViewStart.cshtml]
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPT Polytechnic/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/Shared/_Layout.cshtml]
+[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-sqm6uqgc5g

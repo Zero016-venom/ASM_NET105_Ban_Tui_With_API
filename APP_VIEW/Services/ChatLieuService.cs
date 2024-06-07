@@ -9,7 +9,7 @@ namespace APP_VIEW.Services
 {
     public class ChatLieuService : IChatLieuService
     {
-        HttpClient _httpClient;
+        private readonly HttpClient _httpClient;
 
         public ChatLieuService(HttpClient httpClient)
         {
@@ -22,14 +22,15 @@ namespace APP_VIEW.Services
                 throw new ArgumentNullException(nameof(chatLieuAddRequest));
 
             ChatLieu chatLieu = chatLieuAddRequest.ToChatLieu();
-            chatLieu.ID_ChatLieu = Guid.NewGuid();
+            //chatLieu.ID_ChatLieu = Guid.NewGuid();
+            
             var requestUrl = "https://localhost:7073/api/ChatLieu/create-chat-lieu";
 
-            var response = await _httpClient.PostAsJsonAsync(requestUrl, chatLieu);
+            var response = _httpClient.PostAsJsonAsync(requestUrl, chatLieuAddRequest).Result;
             return chatLieu.ToChatLieuResponse();
         }
 
-        public bool DeleteChatLieu(Guid? id)
+        public async Task<bool> DeleteChatLieu(Guid? id)
         {
             string requestURL = $"https://localhost:7073/api/ChatLieu/delete-chat-lieu?id={id}";
             var response = _httpClient.DeleteAsync(requestURL).Result;
@@ -56,15 +57,9 @@ namespace APP_VIEW.Services
             return chatLieu;
         }
 
-        public async Task<ChatLieuResponse> UpdateChatLieu(ChatLieu chatLieu)
+        public Task<ChatLieuResponse> UpdateChatLieu(ChatLieuUpdateRequest? chatLieuUpdateRequest)
         {
-            if (chatLieu == null)
-                throw new ArgumentNullException(nameof(chatLieu));
-
-            var requestUrl = $"https://localhost:7073/api/ChatLieu/update-chat-lieu?id={chatLieu.ID_ChatLieu}";
-
-            var response = await _httpClient.PutAsJsonAsync(requestUrl, chatLieu);
-            return chatLieu.ToChatLieuResponse();
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using APP_DATA.DatabaseContext;
+using APP_DATA.DTO;
 using APP_DATA.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,11 +28,17 @@ namespace APP_API.Controllers
         }
 
         [HttpPost("create-hang")]
-        public ActionResult CreateHang(Hang hang)
+        public ActionResult CreateHang(HangAddRequest hangAddRequest)
         {
             try
             {
-                hang.ID_Hang = Guid.NewGuid();
+                Hang? hang = new Hang()
+                {
+                    ID_Hang = Guid.NewGuid(),
+                    TenHang = hangAddRequest.TenHang,
+                    MoTa = hangAddRequest.MoTa,
+                    TrangThai = hangAddRequest.TrangThai.ToString()
+                };
                 _db.Hang.Add(hang);
                 _db.SaveChanges();
                 return Ok();
@@ -43,18 +50,18 @@ namespace APP_API.Controllers
         }
 
         [HttpPut("update-hang")]
-        public ActionResult UpdateHang(Hang hang)
+        public ActionResult UpdateHang(HangUpdateRequest hangUpdateRequest)
         {
             try
             {
-                Hang? matchingHang = _db.Hang.FirstOrDefault(temp => temp.ID_Hang == hang.ID_Hang);
+                Hang? matchingHang = _db.Hang.FirstOrDefault(temp => temp.ID_Hang == hangUpdateRequest.ID_Hang);
 
                 if (matchingHang == null)
                     throw new ArgumentNullException(nameof(matchingHang));
 
-                matchingHang.TenHang = hang.TenHang;
-                matchingHang.MoTa = hang.MoTa;
-                matchingHang.TrangThai = hang.TrangThai;
+                matchingHang.TenHang = hangUpdateRequest.TenHang;
+                matchingHang.MoTa = hangUpdateRequest.MoTa;
+                matchingHang.TrangThai = hangUpdateRequest.TrangThai.ToString();
 
                 _db.Hang.Update(matchingHang);
                 _db.SaveChanges();

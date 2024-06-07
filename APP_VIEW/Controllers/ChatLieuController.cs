@@ -20,6 +20,12 @@ namespace APP_VIEW.Controllers
             return View(chatLieus);
         }
 
+        public async Task<ActionResult> Details(Guid id)
+        {
+            ChatLieuResponse? chatLieuResponse = await _iChatLieuService.GetChatLieuById(id);
+            if (chatLieuResponse == null) return RedirectToAction("Index");
+            return View(chatLieuResponse);
+        }
         public IActionResult Create()
         {
             return View();
@@ -46,9 +52,9 @@ namespace APP_VIEW.Controllers
         }
 
         [HttpPost]
-        public ActionResult EditChatLieu(ChatLieu chatLieu)
+        public ActionResult EditChatLieu(ChatLieuUpdateRequest chatLieuUpdateRequest)
         {
-            _iChatLieuService.UpdateChatLieu(chatLieu);
+            _iChatLieuService.UpdateChatLieu(chatLieuUpdateRequest);
             return RedirectToAction("Index");
         }
     }

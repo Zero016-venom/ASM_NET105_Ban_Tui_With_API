@@ -1,0 +1,78 @@
+﻿@model IEnumerable<APP_DATA.DTO.SanPhamResponse>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h4>Danh sách sản phẩm</h4>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Tạo mới</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tên sản phẩm
+            </th>
+            <th>
+                Hãng
+            </th>
+            <th>
+                Số lượng tồn
+            </th>
+            <th>
+                Màu sắc
+            </th>
+            <th>
+                Giá niêm yết
+            </th>
+            <th>
+                Chất liệu
+            </th>
+            <th>
+                Loại sản phẩm
+            </th>
+            <th>
+                Trạng thái
+            </th>
+            @* <th>
+                Img
+            </th> *@
+            <th>
+                Chức năng
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (SanPhamResponse item in Model) {
+        <tr>
+            <td>@item.TenSanPham</td>
+            <td>@item.Hang</td>
+            <td>@item.SoLuongTon</td>
+            <td>@item.MauSac</td>
+            <td>@item.GiaNiemYet</td>
+            <td>@item.ChatLieu</td>
+            <td>@item.LoaiSP</td>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.Img)
+            </td> *@
+            <td>
+                @if (item.TrangThai == StatusOptions.Active.ToString())
+                {
+                    <span class="badge bg-success">Hoạt động</span>
+                }
+                else
+                {
+                    <span class="badge bg-danger">Không hoạt động</span>
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.ID_SanPham }, new { @class = "btn btn-warning" })
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.ID_SanPham }, new { @class = "btn btn-info" })
+                @* @Html.ActionLink("Delete", "Delete", new { id = item.ID_ChatLieu }, new { @class = "btn btn-danger" }) *@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

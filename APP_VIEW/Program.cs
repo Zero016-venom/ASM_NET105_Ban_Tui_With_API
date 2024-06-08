@@ -12,6 +12,7 @@ builder.Services.AddHttpClient();
 builder.Services.AddTransient<IChatLieuService, ChatLieuService>();
 builder.Services.AddTransient<ILoaiSanPhamService, LoaiSanPhamService>();
 builder.Services.AddTransient<IChuongTrinhKhuyenMaiService, ChuongTrinhKhuyenMaiService>();
+builder.Services.AddTransient<ISanPhamService,  SanPhamService>();
 builder.Services.AddTransient<IUserService, UserService>();
 
 

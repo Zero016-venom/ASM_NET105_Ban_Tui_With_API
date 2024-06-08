@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_view\\services\\hangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\services\\hangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_view\\views\\sanpham\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\views\\sanpham\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{882AC30B-E3A1-4108-B8FB-B18CA681FAE5}|APP_API\\APP_API.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_api\\controllers\\hangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{882AC30B-E3A1-4108-B8FB-B18CA681FAE5}|APP_API\\APP_API.csproj|solutionrelative:app_api\\controllers\\hangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_view\\controllers\\hangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\controllers\\hangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_view\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,41 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HangController.cs",
-              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_API\\Controllers\\HangController.cs",
-              "RelativeDocumentMoniker": "APP_API\\Controllers\\HangController.cs",
-              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_API\\Controllers\\HangController.cs",
-              "RelativeToolTip": "APP_API\\Controllers\\HangController.cs",
-              "ViewState": "AQIAADIAAAAAgZmZmZkJwBoAAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T05:45:04.181Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HangService.cs",
-              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Services\\HangService.cs",
-              "RelativeDocumentMoniker": "APP_VIEW\\Services\\HangService.cs",
-              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Services\\HangService.cs",
-              "RelativeToolTip": "APP_VIEW\\Services\\HangService.cs",
-              "ViewState": "AQIAAAMAAAAom5mZmdkhwDMAAABYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T05:44:53.565Z",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Views\\SanPham\\Create.cshtml",
+              "RelativeDocumentMoniker": "APP_VIEW\\Views\\SanPham\\Create.cshtml",
+              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Views\\SanPham\\Create.cshtml",
+              "RelativeToolTip": "APP_VIEW\\Views\\SanPham\\Create.cshtml",
+              "ViewState": "AQIAABYAAAAA6P///38ZwB4AAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-08T07:19:31.926Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HangController.cs",
-              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Controllers\\HangController.cs",
-              "RelativeDocumentMoniker": "APP_VIEW\\Controllers\\HangController.cs",
-              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Controllers\\HangController.cs",
-              "RelativeToolTip": "APP_VIEW\\Controllers\\HangController.cs",
-              "ViewState": "AQIAABgAAAAAkpmZmdkgwCsAAABHAAAA",
+              "DocumentIndex": 1,
+              "Title": "SanPhamController.cs",
+              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Controllers\\SanPhamController.cs",
+              "RelativeDocumentMoniker": "APP_VIEW\\Controllers\\SanPhamController.cs",
+              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Controllers\\SanPhamController.cs",
+              "RelativeToolTip": "APP_VIEW\\Controllers\\SanPhamController.cs",
+              "ViewState": "AQIAACwAAACA1szMzEwVwD0AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T05:44:15.161Z",
+              "WhenOpened": "2024-06-08T07:14:16.158Z",
               "EditorCaption": ""
             }
           ]

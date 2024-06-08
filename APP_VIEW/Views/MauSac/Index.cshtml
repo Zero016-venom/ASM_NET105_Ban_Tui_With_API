@@ -13,26 +13,20 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ID_MauSac)
+                @Html.DisplayName("Tên màu")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TenMauSac)
+                @Html.DisplayName("Mô tả")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MoTa)
+                @Html.DisplayName("Trạng thái")
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TrangThai)
-            </th>
-            <th></th>
+            <th>Chức năng</th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ID_MauSac)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TenMauSac)
             </td>
@@ -52,7 +46,7 @@
             <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.ID_MauSac }, new { @class = "btn btn-warning" }) |
                     @Html.ActionLink("Details", "Details", new { id = item.ID_MauSac }, new { @class = "btn btn-info" }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ID_MauSac })
+                    @* @Html.ActionLink("Delete", "Delete", new { id = item.ID_MauSac }) *@
             </td>
         </tr>
 }

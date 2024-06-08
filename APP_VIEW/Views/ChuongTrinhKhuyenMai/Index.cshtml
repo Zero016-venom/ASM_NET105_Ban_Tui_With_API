@@ -1,0 +1,62 @@
+﻿@model IEnumerable<APP_DATA.DTO.ChuongTrinhKhuyenMaiResponse>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h4>Danh sách chương trình khuyến mãi</h4>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Tạo mới</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Tên chương trình khuyến mãi")
+            </th>
+            <th>
+                @Html.DisplayName("Ngày bắt đầu")
+            </th>
+            <th>
+                @Html.DisplayName("Ngày kết thúc")
+            </th>
+            <th>
+                @Html.DisplayName("Trạng thái")
+            </th>
+            <th>
+                Chức năng
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenChuongTrinhKhuyenMai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayBatDau)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayKetThuc)
+            </td>
+            <td>
+                @if (item.TrangThai == StatusOptions.Active.ToString())
+                {
+                    <span class="badge bg-success">Hoạt động</span>
+                }
+                else
+                {
+                    <span class="badge bg-danger">Không hoạt động</span>
+                }
+         
+            <td>
+               @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.ID_ChuongTrinhKhuyenMai }, new { @class = "btn btn-warning" })
+               @Html.ActionLink("Chi tiết", "Details", new { id = item.ID_ChuongTrinhKhuyenMai }, new { @class = "btn btn-info" })
+               @* @Html.ActionLink("Delete", "Delete", new { id = item.ID_ChatLieu }, new { @class = "btn btn-danger" }) *@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

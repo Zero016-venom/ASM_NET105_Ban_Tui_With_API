@@ -1,4 +1,5 @@
-﻿using APP_DATA.Models;
+﻿using APP_DATA.Enums;
+using APP_DATA.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,14 +12,14 @@ namespace APP_DATA.DTO
 {
     public class MauSacAddRequest
     {
-        [StringLength(50, MinimumLength = 2, ErrorMessage = "Tên màu từ 2 đến 50 ký tự !")]
+        [Required(ErrorMessage = "Tên màu không được để trống")]
         public string? TenMauSac { get; set; }
 
-        [StringLength(256, ErrorMessage = "Mô tả quá dài (dưới 256 ký tự)")]
         public string? MoTa { get; set; }
 
-        [StringLength(50)]
-        public string? TrangThai { get; set; }
+        [Required(ErrorMessage = "Trạng thái không được để trống")]
+        public StatusOptions? TrangThai { get; set; }
+
         public MauSac ToMauSac()
         {
             return new MauSac()

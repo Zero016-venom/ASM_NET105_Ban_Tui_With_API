@@ -2,6 +2,7 @@
 using APP_VIEW.IServices;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Net;
 
 namespace APP_VIEW.Controllers
 {
@@ -9,11 +10,17 @@ namespace APP_VIEW.Controllers
     {
         private readonly ISanPhamService _sanPhamService;
         private readonly IChatLieuService _chatLieuService;
+        private readonly IHangService _hangService;
+        private readonly IMauSacService _mauSacService;
+        private readonly ILoaiSanPhamService _loaiSanPhamService;
 
-        public SanPhamController(ISanPhamService sanPhamService, IChatLieuService chatLieuService)
+        public SanPhamController(ISanPhamService sanPhamService, IChatLieuService chatLieuService, IHangService hangService, IMauSacService mauSacService, ILoaiSanPhamService loaiSanPhamService)
         {
             _sanPhamService = sanPhamService;
             _chatLieuService = chatLieuService;
+            _hangService = hangService;
+            _mauSacService = mauSacService;
+            _loaiSanPhamService = loaiSanPhamService;
         }
 
         public async Task<IActionResult> Index()
@@ -37,6 +44,27 @@ namespace APP_VIEW.Controllers
                 Value = temp.ID_ChatLieu.ToString()
             });
 
+            List<HangResponse> hangs = await _hangService.GetAllHang();
+            ViewBag.Hangs = hangs.Select(temp => new SelectListItem()
+            {
+                Text = temp.TenHang,
+                Value = temp.ID_Hang.ToString()
+            });
+
+            List<MauSacResponse> mauSacs = await _mauSacService.GetAllMauSac();
+            ViewBag.MauSacs = mauSacs.Select(temp => new SelectListItem()
+            {
+                Text = temp.TenMauSac,
+                Value = temp.ID_MauSac.ToString()
+            });
+
+            List<LoaiSanPhamResponse> loaiSanPhams = await _loaiSanPhamService.GetAllLoaiSanPham();
+            ViewBag.LoaiSanPhams = loaiSanPhams.Select(temp => new SelectListItem()
+            {
+                Text = temp.TenLoaiSP,
+                Value = temp.ID_LoaiSP.ToString()
+            });
+
             return View();
         }
 
@@ -48,6 +76,27 @@ namespace APP_VIEW.Controllers
             {
                 Text = temp.TenChatLieu,
                 Value = temp.ID_ChatLieu.ToString()
+            });
+
+            List<HangResponse> hangs = await _hangService.GetAllHang();
+            ViewBag.Hangs = hangs.Select(temp => new SelectListItem()
+            {
+                Text = temp.TenHang,
+                Value = temp.ID_Hang.ToString()
+            });
+
+            List<MauSacResponse> mauSacs = await _mauSacService.GetAllMauSac();
+            ViewBag.MauSacs = mauSacs.Select(temp => new SelectListItem()
+            {
+                Text = temp.TenMauSac,
+                Value = temp.ID_MauSac.ToString()
+            });
+
+            List<LoaiSanPhamResponse> loaiSanPhams = await _loaiSanPhamService.GetAllLoaiSanPham();
+            ViewBag.LoaiSanPhams = loaiSanPhams.Select(temp => new SelectListItem()
+            {
+                Text = temp.TenLoaiSP,
+                Value = temp.ID_LoaiSP.ToString()
             });
 
             SanPhamResponse sanPhamResponse = await _sanPhamService.AddSanPham(sanPhamAddRequest);

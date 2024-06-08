@@ -17,23 +17,25 @@
             </div>
             <div class="form-group">
                 <label asp-for="ID_Hang" class="control-label">Hãng</label>
-                @* <select asp-for="ID_Hang" class="form-control" asp-items="@ViewBag.Countries">
+                <select asp-for="ID_Hang" class="form-control" asp-items="@ViewBag.Hangs">
                     <option value="">Chọn hãng</option>
-                </select> *@
+                </select>
                 <span asp-validation-for="ID_Hang" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="SoLuongTon" class="control-label"></label>
+                <label asp-for="SoLuongTon" class="control-label">Số lượng tồn</label>
                 <input asp-for="SoLuongTon" class="form-control" />
                 <span asp-validation-for="SoLuongTon" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ID_MauSac" class="control-label"></label>
-                <input asp-for="ID_MauSac" class="form-control" />
+                <label asp-for="ID_MauSac" class="control-label">Màu sắc</label>
+                <select asp-for="ID_MauSac" class="form-control" asp-items="@ViewBag.MauSacs">
+                    <option value="">Chọn màu</option>
+                </select>
                 <span asp-validation-for="ID_MauSac" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="GiaNiemYet" class="control-label"></label>
+                <label asp-for="GiaNiemYet" class="control-label">Giá niêm yết</label>
                 <input asp-for="GiaNiemYet" class="form-control" />
                 <span asp-validation-for="GiaNiemYet" class="text-danger"></span>
             </div>
@@ -45,8 +47,10 @@
                 <span asp-validation-for="ID_ChatLieu" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ID_LoaiSP" class="control-label"></label>
-                <input asp-for="ID_LoaiSP" class="form-control" />
+                <label asp-for="ID_LoaiSP" class="control-label">Loại sản phẩm</label>
+                <select asp-for="ID_LoaiSP" class="form-control" asp-items="@ViewBag.LoaiSanPhams">
+                    <option value="">Chọn loại sản phẩm</option>
+                </select>
                 <span asp-validation-for="ID_LoaiSP" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -55,12 +59,19 @@
                 <span asp-validation-for="Img" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TrangThai" class="control-label"></label>
-                <input asp-for="TrangThai" class="form-control" />
-                <span asp-validation-for="TrangThai" class="text-danger"></span>
+                <label asp-for="TrangThai" class="control-label">Trạng thái</label>
+                <select asp-for="TrangThai" class="form-control">
+                    @{
+                        string[] status = (string[])Enum.GetNames(typeof(StatusOptions));
+                    }
+                    @foreach (string item in status)
+                    {
+                        <option value="@item">@item</option>
+                    }
+                </select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-success" />
             </div>
         </form>
     </div>

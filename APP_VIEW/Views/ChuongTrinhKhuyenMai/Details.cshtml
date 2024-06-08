@@ -36,6 +36,6 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Sửa", "Edit", new { id = Model.ID_ChuongTrinhKhuyenMai }) |
-    <a asp-action="Index">Quay lại</a>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.ID_ChuongTrinhKhuyenMai }, new { @class = "btn btn-warning" })
+    <a asp-action="Index" class="btn btn-outline-secondary">Quay lại</a>
 </div>

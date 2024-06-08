@@ -4,7 +4,7 @@
     ViewData["Title"] = "Details";
 }
 
-<h3>Chi tiết chất liệu</h3>
+<h4>Chi tiết chất liệu</h4>
 
 <div>
     <hr />
@@ -30,6 +30,6 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_ChatLieu }) |
-    <a asp-action="Index">Back to List</a>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.ID_ChatLieu }, new { @class = "btn btn-warning" })
+    <a asp-action="Index" class="btn btn-outline-secondary">Quay lại</a>
 </div>

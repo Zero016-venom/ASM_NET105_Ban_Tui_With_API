@@ -1,4 +1,5 @@
-﻿using APP_DATA.Models;
+﻿using APP_DATA.Enums;
+using APP_DATA.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -33,7 +34,7 @@ namespace APP_DATA.DTO
                 ID_MauSac = ID_MauSac,
                 TenMauSac = TenMauSac,
                 MoTa = MoTa,
-                TrangThai = TrangThai
+                TrangThai = (StatusOptions)Enum.Parse(typeof(StatusOptions), TrangThai)
             };
         }
     }

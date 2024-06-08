@@ -30,16 +30,16 @@ namespace APP_API.Controllers
         }
 
         [HttpPost("create-mau")]
-        public ActionResult CreateMau(MauSacAddRequest ms)
+        public ActionResult CreateMau(MauSacAddRequest mauSacAddRequest)
         {
             try
             {
                 MauSac? mau = new MauSac()
                 {
                     ID_MauSac = Guid.NewGuid(),
-                    TenMauSac = ms.TenMauSac,
-                    MoTa = ms.MoTa,
-                    TrangThai = ms.TrangThai
+                    TenMauSac = mauSacAddRequest.TenMauSac,
+                    MoTa = mauSacAddRequest.MoTa,
+                    TrangThai = mauSacAddRequest.TrangThai.ToString()
                 };
                 _db.MauSac.Add(mau);
                 _db.SaveChanges();
@@ -52,20 +52,20 @@ namespace APP_API.Controllers
         }
 
         [HttpPut("update-mau")]
-        public ActionResult UpdateMau(MauSacUpdateRequest msu)
+        public ActionResult UpdateMau(MauSacUpdateRequest mauSacUpdateRequest)
         {
             try
             {
-                MauSac? matchingMau = _db.MauSac.FirstOrDefault(t => t.ID_MauSac == msu.ID_MauSac);
+                MauSac? matchingMau = _db.MauSac.FirstOrDefault(t => t.ID_MauSac == mauSacUpdateRequest.ID_MauSac);
 
                 if (matchingMau == null)
                     throw new ArgumentNullException(nameof(matchingMau));
-                matchingMau.TenMauSac = msu.TenMauSac;
-                matchingMau.MoTa = msu.MoTa;
-                matchingMau.TrangThai = msu.TrangThai;
+                matchingMau.TenMauSac = mauSacUpdateRequest.TenMauSac;
+                matchingMau.MoTa = mauSacUpdateRequest.MoTa;
+                matchingMau.TrangThai = mauSacUpdateRequest.TrangThai.ToString();
+
                 _db.MauSac.Update(matchingMau);
                 _db.SaveChanges();
-
                 return Ok();
             }
             catch (Exception)

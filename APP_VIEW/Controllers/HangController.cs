@@ -1,5 +1,6 @@
 ﻿using APP_DATA.DTO;
 using APP_DATA.Models;
+using APP_VIEW.IServices;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -7,21 +8,23 @@ namespace APP_VIEW.Controllers
 {
     public class HangController : Controller
     {
-        HttpClient client = new HttpClient();
-        public IActionResult Index()
+        private readonly IHangService _hangService;
+
+        public HangController(IHangService hangService)
         {
-            string requestUrl = "https://localhost:7073/api/Hang/get-all-hang";
-            var response = client.GetStringAsync(requestUrl).Result;
-            var data = JsonConvert.DeserializeObject<List<HangResponse>>(response);
-            return View(data);
+            _hangService = hangService;
         }
 
-        public IActionResult Details(Guid id)
+        public async Task<IActionResult> Index()
         {
-            string requestUrl = $"https://localhost:7073/api/Hang/get-hang-by-id?id={id}";
-            var response = client.GetStringAsync(requestUrl).Result;
-            var data = JsonConvert.DeserializeObject<HangResponse>(response);
-            return View(data);
+            List<HangResponse> hangResponses = await _hangService.GetAllHang();
+            return View(hangResponses);
+        }
+
+        public async Task<IActionResult> Details(Guid id)
+        {
+            HangResponse? hangResponse = await _hangService.GetHangById(id);
+            return View(hangResponse);
         }
 
         public IActionResult Create()
@@ -30,33 +33,22 @@ namespace APP_VIEW.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(HangAddRequest hangAddRequest)
+        public async Task<ActionResult> Create(HangAddRequest hangAddRequest)
         {
-            string requestUrl = "https://localhost:7073/api/Hang/create-hang";
-            var response = client.PostAsJsonAsync(requestUrl, hangAddRequest).Result;
+            HangResponse hangResponse = await _hangService.AddHang(hangAddRequest);
             return RedirectToAction("Index");
         }
 
-        public IActionResult Edit(Guid id)
+        public async Task<IActionResult> Edit(Guid id)
         {
-            string requestUrl = $"https://localhost:7073/api/Hang/get-hang-by-id?id={id}";
-            var response = client.GetStringAsync(requestUrl).Result;
-            var data = JsonConvert.DeserializeObject<HangUpdateRequest>(response);
-            return View(data);
+            HangResponse? hangResponse = await _hangService.GetHangById(id);
+            return View(hangResponse);
         }
 
         [HttpPost]
-        public IActionResult Edit(HangUpdateRequest hangUpdateRequest)
+        public async Task<IActionResult> Edit(HangUpdateRequest hangUpdateRequest)
         {
-            string requestUrl = $"https://localhost:7073/api/Hang/update-hang";
-            var response = client.PutAsJsonAsync(requestUrl, hangUpdateRequest).Result;
-            return RedirectToAction("Index");
-        }
-
-        public IActionResult Delete(Guid id)
-        {
-            string requestUrl = $"https://localhost:7073/api/Hang/delete-hang";
-            var response = client.DeleteAsync(requestUrl).Result;
+            HangResponse hangResponse = await _hangService.UpdateHang(hangUpdateRequest);
             return RedirectToAction("Index");
         }
     }

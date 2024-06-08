@@ -1,0 +1,86 @@
+﻿@model APP_DATA.DTO.SanPhamAddRequest
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h3>Tạo mới</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TenSanPham" class="control-label">Tên sản phẩm</label>
+                <input asp-for="TenSanPham" class="form-control" />
+                <span asp-validation-for="TenSanPham" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_Hang" class="control-label">Hãng</label>
+                <select asp-for="ID_Hang" class="form-control" asp-items="@ViewBag.Hangs">
+                    <option value="">Chọn hãng</option>
+                </select>
+                <span asp-validation-for="ID_Hang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SoLuongTon" class="control-label">Số lượng tồn</label>
+                <input asp-for="SoLuongTon" class="form-control" />
+                <span asp-validation-for="SoLuongTon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_MauSac" class="control-label">Màu sắc</label>
+                <select asp-for="ID_MauSac" class="form-control" asp-items="@ViewBag.MauSacs">
+                    <option value="">Chọn màu</option>
+                </select>
+                <span asp-validation-for="ID_MauSac" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GiaNiemYet" class="control-label">Giá niêm yết</label>
+                <input asp-for="GiaNiemYet" class="form-control" />
+                <span asp-validation-for="GiaNiemYet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_ChatLieu" class="control-label">Chất liệu</label>
+                <select asp-for="ID_ChatLieu" class="form-control" asp-items="@ViewBag.ChatLieus">
+                    <option value="">Chọn chất liệu</option>
+                </select>
+                <span asp-validation-for="ID_ChatLieu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_LoaiSP" class="control-label">Loại sản phẩm</label>
+                <select asp-for="ID_LoaiSP" class="form-control" asp-items="@ViewBag.LoaiSanPhams">
+                    <option value="">Chọn loại sản phẩm</option>
+                </select>
+                <span asp-validation-for="ID_LoaiSP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Img" class="control-label"></label>
+                <input asp-for="Img" class="form-control" />
+                <span asp-validation-for="Img" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrangThai" class="control-label">Trạng thái</label>
+                <select asp-for="TrangThai" class="form-control">
+                    @{
+                        string[] status = (string[])Enum.GetNames(typeof(StatusOptions));
+                    }
+                    @foreach (string item in status)
+                    {
+                        <option value="@item">@item</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-outline-secondary">Quay lại</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

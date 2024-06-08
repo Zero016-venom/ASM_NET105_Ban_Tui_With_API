@@ -1,4 +1,5 @@
 ﻿using APP_DATA.DatabaseContext;
+using APP_DATA.DTO;
 using APP_DATA.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,11 +29,18 @@ namespace APP_API.Controllers
         }
 
         [HttpPost("create-chuong-trinh-khuyen-mai")]
-        public ActionResult CreateChuongTrinhKhuyenMai(ChuongTrinhKhuyenMai chuongTrinhKhuyenMai)
+        public ActionResult CreateChuongTrinhKhuyenMai(ChuongTrinhKhuyenMaiAddRequest chuongTrinhKhuyenMaiAddRequest)
         {
             try
             {
-                chuongTrinhKhuyenMai.ID_ChuongTrinhKhuyenMai = Guid.NewGuid();
+                ChuongTrinhKhuyenMai chuongTrinhKhuyenMai = new ChuongTrinhKhuyenMai()
+                {
+                    ID_ChuongTrinhKhuyenMai = Guid.NewGuid(),
+                    TenChuongTrinhKhuyenMai = chuongTrinhKhuyenMaiAddRequest.TenChuongTrinhKhuyenMai,
+                    NgayBatDau = chuongTrinhKhuyenMaiAddRequest.NgayBatDau,
+                    NgayKetThuc = chuongTrinhKhuyenMaiAddRequest.NgayKetThuc,
+                    TrangThai = chuongTrinhKhuyenMaiAddRequest.TrangThai.ToString()
+                };
                 _db.ChuongTrinhKhuyenMai.Add(chuongTrinhKhuyenMai);
                 _db.SaveChanges();
                 return Ok();
@@ -44,18 +52,18 @@ namespace APP_API.Controllers
         }
 
         [HttpPut("update-chuong-trinh-khuyen-mai")]
-        public ActionResult UpdateChuongTrinhKhuyenMai(ChuongTrinhKhuyenMai chuongTrinhKhuyenMai)
+        public ActionResult UpdateChuongTrinhKhuyenMai(ChuongTrinhKhuyenMaiUpdateRequest chuongTrinhKhuyenMaiUpdateRequest)
         {
             try
             {
-                ChuongTrinhKhuyenMai? matchingChuongTrinhKhuyenMai = _db.ChuongTrinhKhuyenMai.FirstOrDefault(temp => temp.ID_ChuongTrinhKhuyenMai == chuongTrinhKhuyenMai.ID_ChuongTrinhKhuyenMai);
+                ChuongTrinhKhuyenMai? matchingChuongTrinhKhuyenMai = _db.ChuongTrinhKhuyenMai.FirstOrDefault(temp => temp.ID_ChuongTrinhKhuyenMai == chuongTrinhKhuyenMaiUpdateRequest.ID_ChuongTrinhKhuyenMai);
                 if (matchingChuongTrinhKhuyenMai == null)
-                    throw new ArgumentNullException(nameof(ChuongTrinhKhuyenMai));
+                    throw new ArgumentNullException(nameof(chuongTrinhKhuyenMaiUpdateRequest));
 
-                matchingChuongTrinhKhuyenMai.TenChuongTrinhKhuyenMai = chuongTrinhKhuyenMai.TenChuongTrinhKhuyenMai;
-                matchingChuongTrinhKhuyenMai.NgayBatDau = chuongTrinhKhuyenMai.NgayBatDau;
-                matchingChuongTrinhKhuyenMai.NgayKetThuc = chuongTrinhKhuyenMai.NgayKetThuc;
-                matchingChuongTrinhKhuyenMai.TrangThai = chuongTrinhKhuyenMai.TrangThai;
+                matchingChuongTrinhKhuyenMai.TenChuongTrinhKhuyenMai = chuongTrinhKhuyenMaiUpdateRequest.TenChuongTrinhKhuyenMai;
+                matchingChuongTrinhKhuyenMai.NgayBatDau = chuongTrinhKhuyenMaiUpdateRequest.NgayBatDau;
+                matchingChuongTrinhKhuyenMai.NgayKetThuc = chuongTrinhKhuyenMaiUpdateRequest.NgayKetThuc;
+                matchingChuongTrinhKhuyenMai.TrangThai = chuongTrinhKhuyenMaiUpdateRequest.TrangThai.ToString();
 
                 _db.ChuongTrinhKhuyenMai.Update(matchingChuongTrinhKhuyenMai);
                 _db.SaveChanges();
@@ -67,7 +75,7 @@ namespace APP_API.Controllers
             }
         }
 
-        [HttpPut("delete-chuong-trinh-khuyen-mai")]
+        [HttpDelete("delete-chuong-trinh-khuyen-mai")]
         public ActionResult DeleteChuongTrinhKhuyenMai(Guid id)
         {
             try

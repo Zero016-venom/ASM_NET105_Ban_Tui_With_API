@@ -14,6 +14,7 @@ builder.Services.AddTransient<IHangService,  HangService>();
 builder.Services.AddTransient<ILoaiSanPhamService, LoaiSanPhamService>();
 builder.Services.AddTransient<IChuongTrinhKhuyenMaiService, ChuongTrinhKhuyenMaiService>();
 builder.Services.AddTransient<ISanPhamService,  SanPhamService>();
+builder.Services.AddTransient<IMauSacService , MauSacService>();
 builder.Services.AddTransient<IUserService, UserService>();
 
 

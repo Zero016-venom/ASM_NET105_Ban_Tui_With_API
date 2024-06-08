@@ -1,13 +1,18 @@
-﻿using APP_DATA.Models;
+﻿using APP_DATA.DTO;
+using APP_DATA.Models;
 
 namespace APP_VIEW.IServices
 {
     public interface IMauSacService
     {
-        List<MauSac> MauSac { get; set; }
-        public bool CreateMauSac(MauSac mauSac);
-        public bool UpdateMauSac(MauSac mauSac);
-        public bool DeleteMauSac(Guid id);
-        public MauSac GetMauSacById(Guid id);
+        Task<List<MauSacResponse>> GetAllMauSac();
+
+        Task<MauSacResponse?> GetMauSacById(Guid id);
+
+        Task<MauSacResponse> AddMauSac(MauSacAddRequest? mauSacAddRequest);
+
+        Task<MauSacResponse> UpdateMauSac(MauSacUpdateRequest? mauSacUpdateRequest);
+
+        Task<bool> DeleteMauSac(Guid id);
     }
 }

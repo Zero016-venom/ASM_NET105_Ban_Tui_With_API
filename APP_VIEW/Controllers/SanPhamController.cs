@@ -71,6 +71,12 @@ namespace APP_VIEW.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(SanPhamAddRequest sanPhamAddRequest)
         {
+            SanPhamResponse sanPhamResponse = await _sanPhamService.AddSanPham(sanPhamAddRequest);
+            return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> Edit(Guid id)
+        {
             List<ChatLieuResponse> chatLieus = await _chatLieuService.GetAllChatLieu();
             ViewBag.ChatLieus = chatLieus.Select(temp => new SelectListItem()
             {
@@ -99,12 +105,6 @@ namespace APP_VIEW.Controllers
                 Value = temp.ID_LoaiSP.ToString()
             });
 
-            SanPhamResponse sanPhamResponse = await _sanPhamService.AddSanPham(sanPhamAddRequest);
-            return RedirectToAction("Index");
-        }
-
-        public async Task<IActionResult> Edit(Guid id)
-        {
             SanPhamResponse? sanPhamResponse = await _sanPhamService.GetSanPhamById(id);
             return View(sanPhamResponse);
         }

@@ -65,6 +65,7 @@ namespace APP_DATA.DTO
             return new SanPhamResponse()
             {
                 ID_SanPham = sanPham.ID_SanPham,
+                TenSanPham = sanPham.TenSanPham,
                 ID_ChatLieu = sanPham.ID_ChatLieu,
                 ID_Hang = sanPham.ID_Hang,
                 ID_LoaiSP = sanPham.ID_LoaiSP,

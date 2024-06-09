@@ -71,34 +71,6 @@ namespace APP_VIEW.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(SanPhamAddRequest sanPhamAddRequest)
         {
-            List<ChatLieuResponse> chatLieus = await _chatLieuService.GetAllChatLieu();
-            ViewBag.ChatLieus = chatLieus.Select(temp => new SelectListItem()
-            {
-                Text = temp.TenChatLieu,
-                Value = temp.ID_ChatLieu.ToString()
-            });
-
-            List<HangResponse> hangs = await _hangService.GetAllHang();
-            ViewBag.Hangs = hangs.Select(temp => new SelectListItem()
-            {
-                Text = temp.TenHang,
-                Value = temp.ID_Hang.ToString()
-            });
-
-            List<MauSacResponse> mauSacs = await _mauSacService.GetAllMauSac();
-            ViewBag.MauSacs = mauSacs.Select(temp => new SelectListItem()
-            {
-                Text = temp.TenMauSac,
-                Value = temp.ID_MauSac.ToString()
-            });
-
-            List<LoaiSanPhamResponse> loaiSanPhams = await _loaiSanPhamService.GetAllLoaiSanPham();
-            ViewBag.LoaiSanPhams = loaiSanPhams.Select(temp => new SelectListItem()
-            {
-                Text = temp.TenLoaiSP,
-                Value = temp.ID_LoaiSP.ToString()
-            });
-
             SanPhamResponse sanPhamResponse = await _sanPhamService.AddSanPham(sanPhamAddRequest);
             return RedirectToAction("Index");
         }
@@ -140,34 +112,6 @@ namespace APP_VIEW.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(SanPhamUpdateRequest sanPhamUpdateRequest)
         {
-            List<ChatLieuResponse> chatLieus = await _chatLieuService.GetAllChatLieu();
-            ViewBag.ChatLieus = chatLieus.Select(temp => new SelectListItem()
-            {
-                Text = temp.TenChatLieu,
-                Value = temp.ID_ChatLieu.ToString()
-            });
-
-            List<HangResponse> hangs = await _hangService.GetAllHang();
-            ViewBag.Hangs = hangs.Select(temp => new SelectListItem()
-            {
-                Text = temp.TenHang,
-                Value = temp.ID_Hang.ToString()
-            });
-
-            List<MauSacResponse> mauSacs = await _mauSacService.GetAllMauSac();
-            ViewBag.MauSacs = mauSacs.Select(temp => new SelectListItem()
-            {
-                Text = temp.TenMauSac,
-                Value = temp.ID_MauSac.ToString()
-            });
-
-            List<LoaiSanPhamResponse> loaiSanPhams = await _loaiSanPhamService.GetAllLoaiSanPham();
-            ViewBag.LoaiSanPhams = loaiSanPhams.Select(temp => new SelectListItem()
-            {
-                Text = temp.TenLoaiSP,
-                Value = temp.ID_LoaiSP.ToString()
-            });
-
             SanPhamResponse sanPhamResponse = await _sanPhamService.UpdateSanPham(sanPhamUpdateRequest);
             return RedirectToAction("Index");
         }

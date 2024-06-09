@@ -26,7 +26,7 @@ namespace APP_VIEW.Services
 
         public async Task<bool> DeleteHang(Guid id)
         {
-            string requestUrl = "https://localhost:7073/api/Hang/delete-hang";
+            string requestUrl = $"https://localhost:7073/api/Hang/delete-hang?id{id}";
             var response = _httpClient.DeleteAsync(requestUrl).Result;
             if (response.IsSuccessStatusCode)
                 return true;

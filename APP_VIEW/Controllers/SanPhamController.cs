@@ -69,8 +69,20 @@ namespace APP_VIEW.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(SanPhamAddRequest sanPhamAddRequest)
+        public async Task<IActionResult> Create(SanPhamAddRequest sanPhamAddRequest, IFormFile imgFile)
         {
+            if(imgFile != null && imgFile.Length > 0)
+            {
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", imgFile.FileName);
+                var steam = new FileStream(path, FileMode.Create);
+                imgFile.CopyTo(steam);
+                sanPhamAddRequest.Img = imgFile.FileName;
+            }
+            else
+            {
+                sanPhamAddRequest.Img = "";
+            }
+
             SanPhamResponse sanPhamResponse = await _sanPhamService.AddSanPham(sanPhamAddRequest);
             return RedirectToAction("Index");
         }
@@ -110,8 +122,20 @@ namespace APP_VIEW.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(SanPhamUpdateRequest sanPhamUpdateRequest)
+        public async Task<IActionResult> Edit(SanPhamUpdateRequest sanPhamUpdateRequest, IFormFile imgFile)
         {
+            if (imgFile != null && imgFile.Length > 0)
+            {
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", imgFile.FileName);
+                var steam = new FileStream(path, FileMode.Create);
+                imgFile.CopyTo(steam);
+                sanPhamUpdateRequest.Img = imgFile.FileName;
+            }
+            else
+            {
+                sanPhamUpdateRequest.Img = "";
+            }
+
             SanPhamResponse sanPhamResponse = await _sanPhamService.UpdateSanPham(sanPhamUpdateRequest);
             return RedirectToAction("Index");
         }

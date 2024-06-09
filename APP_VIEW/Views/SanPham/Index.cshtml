@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
+    List<string> extensions = new List<string>() { ".jpg", ".png", ".tiff", ".jpeg", ".webp" };
 }
 
 <h4>Danh sách sản phẩm</h4>
@@ -12,51 +13,33 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                Tên sản phẩm
-            </th>
-            <th>
-                Hãng
-            </th>
-            <th>
-                Số lượng tồn
-            </th>
-            <th>
-                Màu sắc
-            </th>
-            <th>
-                Giá niêm yết
-            </th>
-            <th>
-                Chất liệu
-            </th>
-            <th>
-                Loại sản phẩm
-            </th>
-            <th>
-                Trạng thái
-            </th>
-            @* <th>
-                Img
-            </th> *@
-            <th>
-                Chức năng
-            </th>
+            <th>Tên sản phẩm</th>
+            <th>Số lượng tồn</th>
+            <th>Giá niêm yết</th>
+            <th>Trạng thái</th>
+            <th>Hình ảnh</th>
+            <th>Chức năng</th>
         </tr>
     </thead>
     <tbody>
 @foreach (SanPhamResponse item in Model) {
         <tr>
             <td>@item.TenSanPham</td>
-            <td>@item.Hang</td>
             <td>@item.SoLuongTon</td>
-            <td>@item.MauSac</td>
-            <td>@item.GiaNiemYet</td>
-            <td>@item.ChatLieu</td>
-            <td>@item.LoaiSP</td>
-            @* <td>
-                @Html.DisplayFor(modelItem => item.Img)
-            </td> *@
+            <td>@string.Format("{0:0,0}", item.GiaNiemYet) VNĐ</td>
+            <td>
+                <div class="bg-light d-flex justify-content-center">
+                    @{
+                        var extension = System.IO.Path.GetExtension(item.Img);
+                    }
+                    @if (@extensions.Contains(extension))
+                    {
+                        <div class="img-container d-flex justify-content-center" style="width: 100px; height: 100px;">
+                            <img class="responsive-img" src="~/images/@item.Img" alt="@item.TenSanPham" style="object-fit:cover">
+                        </div>
+                    }
+                </div>
+            </td>
             <td>
                 @if (item.TrangThai == StatusOptions.Active.ToString())
                 {

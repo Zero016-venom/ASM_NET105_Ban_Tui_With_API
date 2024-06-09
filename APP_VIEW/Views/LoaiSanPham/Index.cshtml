@@ -43,8 +43,7 @@
                 <td>
                     @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.ID_LoaiSP }, new { @class = "btn btn-warning" })
                     @Html.ActionLink("Chi tiết", "Details", new { id = item.ID_LoaiSP }, new { @class = "btn btn-info" })
-                    @* @Html.ActionLink("Delete", "Delete", new { id = item.ID_LoaiSP }, new { @class = "btn btn-danger" }) *@
-
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.ID_LoaiSP }, new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }

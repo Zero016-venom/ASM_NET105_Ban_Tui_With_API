@@ -53,5 +53,11 @@ namespace APP_VIEW.Controllers
             _iloaiSanPhamService.UpdateLoaiSanPham(loaiSanPhamUpdateRequest);
             return RedirectToAction("Index");
         }
+ 
+        public IActionResult Delete(Guid id)
+        {
+            _iloaiSanPhamService.DeleteLoaiSanPham(id);
+            return RedirectToAction("Index");
+        }
     }
 }

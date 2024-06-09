@@ -56,8 +56,8 @@ namespace APP_VIEW.Services
                 throw new ArgumentNullException(nameof(loaiSanPhamUpdateRequest));
 
             LoaiSP loaiSanPham = loaiSanPhamUpdateRequest.ToLoaiSanPham();
-            string requestUrl = "https://localhost:7073/api/LoaiSanPham/create-loai-san-pham";
-            var response = _httpClient.PostAsJsonAsync(requestUrl, loaiSanPhamUpdateRequest).Result;
+            string requestUrl = "https://localhost:7073/api/LoaiSanPham/update-loai-san-pham";
+            var response = _httpClient.PutAsJsonAsync(requestUrl, loaiSanPhamUpdateRequest).Result;
             return loaiSanPham.ToLoaiSanPhamResponse();
         }
     }

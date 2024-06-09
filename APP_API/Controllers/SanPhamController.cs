@@ -4,6 +4,7 @@ using APP_DATA.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing.Template;
+using Microsoft.EntityFrameworkCore;
 
 namespace APP_API.Controllers
 {
@@ -21,13 +22,17 @@ namespace APP_API.Controllers
         [HttpGet("get-all-san-pham")]
         public ActionResult GetAllSanPham()
         {
-            return Ok(_db.SanPham.ToList());
+            var sanPhams = _db.SanPham.Include(temp => temp.Hang).Include(temp => temp.MauSac).Include(temp => temp.ChatLieu).Include(temp => temp.LoaiSP).ToList();
+            return Ok(sanPhams.Select(temp => temp.ToSanPhamResponse()).ToList());
         }
 
         [HttpGet("get-san-pham-by-id")]
         public ActionResult GetSanPhamById(Guid id)
         {
-            return Ok(_db.SanPham.FirstOrDefault(temp => temp.ID_SanPham == id));
+            SanPham? sanPham = _db.SanPham.Include(temp => temp.Hang).Include(temp => temp.MauSac).Include(temp => temp.ChatLieu).Include(temp => temp.LoaiSP).FirstOrDefault(temp => temp.ID_SanPham == id);
+            if (sanPham == null)
+                return BadRequest();
+            return Ok(sanPham.ToSanPhamResponse());
         }
 
         [HttpPost("create-san-pham")]
@@ -43,13 +48,13 @@ namespace APP_API.Controllers
                     SoLuongTon = sanPhamAddRequest.SoLuongTon,
                     ID_MauSac = sanPhamAddRequest.ID_MauSac,
                     GiaNiemYet = sanPhamAddRequest.GiaNiemYet,
-                    ID_ChatLieu= sanPhamAddRequest.ID_ChatLieu,
+                    ID_ChatLieu = sanPhamAddRequest.ID_ChatLieu,
                     ID_LoaiSP = sanPhamAddRequest.ID_LoaiSP,
                     TrangThai = sanPhamAddRequest.TrangThai.ToString()
                 };
                 _db.SanPham.Add(sanPham);
                 _db.SaveChanges();
-                return Ok();
+                return Ok(sanPham.ToSanPhamResponse());
             }
             catch (Exception)
             {
@@ -78,7 +83,7 @@ namespace APP_API.Controllers
 
                 _db.SanPham.Update(matchingSanPham);
                 _db.SaveChanges();
-                return Ok();
+                return Ok(matchingSanPham.ToSanPhamResponse());
             }
             catch (Exception)
             {
@@ -92,7 +97,7 @@ namespace APP_API.Controllers
             try
             {
                 SanPham? matchingSanPham = _db.SanPham.FirstOrDefault(temp => temp.ID_SanPham == id);
-                if(matchingSanPham == null)
+                if (matchingSanPham == null)
                     throw new ArgumentException(nameof(matchingSanPham));
                 _db.Remove(matchingSanPham);
                 _db.SaveChanges();

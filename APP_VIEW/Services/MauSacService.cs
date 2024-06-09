@@ -37,7 +37,7 @@ namespace APP_VIEW.Services
         {
             string requestUrl = "https://localhost:7073/api/MauSac/get-all-mau";
             var response = _httpClient.GetStringAsync(requestUrl).Result;
-            List<MauSacResponse> mauSacResponses = JsonConvert.DeserializeObject<List<MauSacResponse>>(response);
+            List<MauSacResponse>? mauSacResponses = JsonConvert.DeserializeObject<List<MauSacResponse>>(response);
             return mauSacResponses;
         }
 
@@ -45,7 +45,7 @@ namespace APP_VIEW.Services
         {
             string requestUrl = $"https://localhost:7073/api/MauSac/get-mau-by-id?id={id}";
             var response = _httpClient.GetStringAsync(requestUrl).Result;
-            MauSacResponse mauSacResponses = JsonConvert.DeserializeObject<MauSacResponse>(response);
+            MauSacResponse? mauSacResponses = JsonConvert.DeserializeObject<MauSacResponse>(response);
             return mauSacResponses;
         }
 

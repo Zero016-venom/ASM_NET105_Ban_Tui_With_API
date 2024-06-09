@@ -43,6 +43,7 @@ namespace APP_VIEW.Controllers
         public async Task<ActionResult> Edit(Guid id)
         {
             MauSacResponse? mauSacResponse = await _mauSacService.GetMauSacById(id);
+            if (mauSacResponse == null) return RedirectToAction("Index");
             return View(mauSacResponse);
         }
 

@@ -9,147 +9,159 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = APP_VIEW
 build_property.RootNamespace = APP_VIEW
-build_property.ProjectDir = C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_VIEW\
+build_property.ProjectDir = E:\FPT\1c#\c#5\ASM\ASMChinh\ASM_NET105_Ban_Tui_With_API\APP_VIEW\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\hviet\Databases\NET105\ASM_NET105_BAN_TUI_WithAPI\APP_VIEW
+build_property.MSBuildProjectDirectory = E:\FPT\1c#\c#5\ASM\ASMChinh\ASM_NET105_Ban_Tui_With_API\APP_VIEW
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/ChatLieu/Create.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/ChatLieu/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdExpZXVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/ChatLieu/Details.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/ChatLieu/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdExpZXVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/ChatLieu/Edit.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/ChatLieu/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdExpZXVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/ChatLieu/Index.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/ChatLieu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdExpZXVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/ChuongTrinhKhuyenMai/Create.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/ChuongTrinhKhuyenMai/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2h1b25nVHJpbmhLaHV5ZW5NYWlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/ChuongTrinhKhuyenMai/Details.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/ChuongTrinhKhuyenMai/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2h1b25nVHJpbmhLaHV5ZW5NYWlcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/ChuongTrinhKhuyenMai/Edit.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/ChuongTrinhKhuyenMai/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2h1b25nVHJpbmhLaHV5ZW5NYWlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/ChuongTrinhKhuyenMai/Index.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/ChuongTrinhKhuyenMai/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2h1b25nVHJpbmhLaHV5ZW5NYWlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Hang/Create.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/Hang/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Hang/Details.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/Hang/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Hang/Edit.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/Hang/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Hang/Index.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/Hang/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Home/Index.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/HoaDon/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9hRG9uXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/HoaDon/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9hRG9uXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/HoaDon/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9hRG9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Home/Privacy.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/LoaiSanPham/Create.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/LoaiSanPham/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNhblBoYW1cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/LoaiSanPham/Details.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/LoaiSanPham/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNhblBoYW1cRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/LoaiSanPham/Edit.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/LoaiSanPham/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNhblBoYW1cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/LoaiSanPham/Index.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/LoaiSanPham/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNhblBoYW1cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/MauSac/Create.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/MauSac/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF1U2FjXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/MauSac/Details.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/MauSac/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF1U2FjXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/MauSac/Edit.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/MauSac/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF1U2FjXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/MauSac/Index.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/MauSac/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF1U2FjXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/SanPham/Create.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/SanPham/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/SanPham/Details.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/SanPham/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/SanPham/Edit.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/SanPham/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/SanPham/Index.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/SanPham/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Shared/Error.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/TaiKhoan/Index.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/TaiKhoan/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFpS2hvYW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/TaiKhoan/Login.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/TaiKhoan/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFpS2hvYW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/TaiKhoan/Register.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/TaiKhoan/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFpS2hvYW5cUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/_ViewImports.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/_ViewStart.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hviet/Databases/NET105/ASM_NET105_BAN_TUI_WithAPI/APP_VIEW/Views/Shared/_Layout.cshtml]
+[E:/FPT/1c\#/c\#5/ASM/ASMChinh/ASM_NET105_Ban_Tui_With_API/APP_VIEW/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-sqm6uqgc5g

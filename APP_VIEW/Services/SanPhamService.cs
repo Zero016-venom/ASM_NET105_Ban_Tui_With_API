@@ -47,6 +47,13 @@ namespace APP_VIEW.Services
             var response = _httpClient.GetStringAsync(requestUrl).Result;
             SanPhamResponse? sanPhamResponses = JsonConvert.DeserializeObject<SanPhamResponse>(response);
             return sanPhamResponses;
+
+            //string requestUrl = $"https://localhost:7073/api/SanPham/get-san-pham-by-id?id={id}";
+            //HttpResponseMessage response = await _httpClient.GetAsync(requestUrl);
+
+            //string responseContent = await response.Content.ReadAsStringAsync();
+            //SanPhamResponse? sanPhamResponse = JsonConvert.DeserializeObject<SanPhamResponse>(responseContent);
+            //return sanPhamResponse;
         }
 
         public async Task<SanPhamResponse> UpdateSanPham(SanPhamUpdateRequest? sanPhamUpdateRequest)

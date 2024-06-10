@@ -27,6 +27,16 @@
             <td>@item.TenSanPham</td>
             <td>@item.SoLuongTon</td>
             <td>@string.Format("{0:0,0}", item.GiaNiemYet) VNĐ</td>
+                <td>
+                    @if (item.TrangThai == StatusOptions.Active.ToString())
+                    {
+                        <span class="badge bg-success">Hoạt động</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Không hoạt động</span>
+                    }
+                </td>
             <td>
                 <div class="bg-light d-flex justify-content-center">
                     @{
@@ -40,16 +50,7 @@
                     }
                 </div>
             </td>
-            <td>
-                @if (item.TrangThai == StatusOptions.Active.ToString())
-                {
-                    <span class="badge bg-success">Hoạt động</span>
-                }
-                else
-                {
-                    <span class="badge bg-danger">Không hoạt động</span>
-                }
-            </td>
+            
             <td>
                 @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.ID_SanPham }, new { @class = "btn btn-warning" })
                 @Html.ActionLink("Chi tiết", "Details", new { id = item.ID_SanPham }, new { @class = "btn btn-info" })

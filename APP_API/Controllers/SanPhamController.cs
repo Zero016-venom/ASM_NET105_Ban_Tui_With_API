@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing.Template;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace APP_API.Controllers
 {
@@ -61,6 +62,7 @@ namespace APP_API.Controllers
                 return BadRequest();
             }
         }
+
 
         [HttpPut("update-san-pham")]
         public ActionResult UpdateSanPham(SanPhamUpdateRequest sanPhamUpdateRequest)

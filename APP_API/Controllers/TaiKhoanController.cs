@@ -30,82 +30,92 @@ namespace APP_API.Controllers
         [HttpGet("get-all-users")]
         public async Task<IActionResult> GetAllUsers()
         {
-            var user = await _db.User.ToListAsync();
-            return Ok(user);
+            var users = await _db.User.ToListAsync();
+            return Ok(users);
         }
 
         [HttpGet("get-user-by-id")]
         public IActionResult GetUserById(Guid id)
         {
-            return Ok(_db.User.FirstOrDefault(temp => temp.Id == id));
+            var user = _db.User.FirstOrDefault(temp => temp.Id == id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return Ok(user);
         }
 
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDTO registerDTO)
         {
-            if(!ModelState.IsValid)
+            try
             {
-                return BadRequest(ModelState);
-            }
-
-            ApplicationUser user = new ApplicationUser()
-            {
-                Email = registerDTO.Email,
-                PersonName = registerDTO.PersonName,
-                PhoneNumber = registerDTO.Phone,
-                UserName = registerDTO.Email,
-                Status = StatusOptions.Active.ToString()
-            };
-
-            IdentityResult result = await _userManager.CreateAsync(user, registerDTO.Password);
-
-            if (result.Succeeded)
-            {
-                //Kiem tra trang thai radio btn
-                if (registerDTO.UserType == APP_DATA.Enums.UserTypeOptions.Admin)
+                if (!ModelState.IsValid)
                 {
-                    //Tao role admin
-                    if (await _roleManager.FindByNameAsync(UserTypeOptions.Admin.ToString()) is null)
+                    return BadRequest(ModelState);
+                }
+
+                ApplicationUser user = new ApplicationUser()
+                {
+                    Email = registerDTO.Email,
+                    PersonName = registerDTO.PersonName,
+                    PhoneNumber = registerDTO.Phone,
+                    UserName = registerDTO.Email,
+                    Status = StatusOptions.Active.ToString()
+                };
+
+                IdentityResult result = await _userManager.CreateAsync(user, registerDTO.Password);
+                if (result.Succeeded)
+                {
+                    if (registerDTO.UserType == UserTypeOptions.Admin)
                     {
-                        ApplicationRole applicationRole = new ApplicationRole()
+                        if (await _roleManager.FindByNameAsync(UserTypeOptions.Admin.ToString()) is null)
                         {
-                            Name = UserTypeOptions.Admin.ToString()
-                        };
-                        await _roleManager.CreateAsync(applicationRole);
+                            ApplicationRole applicationRole = new ApplicationRole()
+                            {
+                                Name = UserTypeOptions.Admin.ToString()
+                            };
+                            await _roleManager.CreateAsync(applicationRole);
+                        }
+
+                        await _userManager.AddToRoleAsync(user, UserTypeOptions.Admin.ToString());
+                    }
+                    else
+                    {
+                        if (await _roleManager.FindByNameAsync(UserTypeOptions.User.ToString()) is null)
+                        {
+                            ApplicationRole applicationRole = new ApplicationRole()
+                            {
+                                Name = UserTypeOptions.User.ToString()
+                            };
+                            await _roleManager.CreateAsync(applicationRole);
+                        }
+
+                        await _userManager.AddToRoleAsync(user, UserTypeOptions.User.ToString());
                     }
 
-                    //Them user moi trong role admin
-                    await _userManager.AddToRoleAsync(user, UserTypeOptions.Admin.ToString());
+                    var gioHang = new GioHang()
+                    {
+                        ID_User = user.Id,
+                        TrangThai = StatusOptions.Active.ToString()
+                    };
+
+                    _db.GioHang.Add(gioHang);
+                    await _db.SaveChangesAsync();
+
+                    return Ok();
                 }
                 else
                 {
-                    //Tao role user
-                    if (await _roleManager.FindByNameAsync(UserTypeOptions.User.ToString()) is null)
+                    foreach (IdentityError error in result.Errors)
                     {
-                        ApplicationRole applicationRole = new ApplicationRole() { Name = UserTypeOptions.User.ToString() };
-                        await _roleManager.CreateAsync(applicationRole);
+                        ModelState.AddModelError("Register", error.Description);
                     }
-                    //Them user moi trong role user
-                    await _userManager.AddToRoleAsync(user, UserTypeOptions.User.ToString());
                 }
-                //Tao cart cho user
-                var gioHang = new GioHang()
-                {
-                    ID_User = user.Id,
-                    TrangThai = StatusOptions.Active.ToString()
-                };
-
-                _db.GioHang.Add(gioHang);
-                await _db.SaveChangesAsync();
-
-                return RedirectToAction("Login", "TaiKhoan");
             }
-            else
+            catch (Exception)
             {
-                foreach (IdentityError item in result.Errors)
-                {
-                    ModelState.AddModelError("Register", item.Description);
-                }
+                return BadRequest();
             }
 
             return BadRequest(ModelState);
@@ -114,9 +124,9 @@ namespace APP_API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDTO loginDTO)
         {
-            if (ModelState.IsValid == false)
+            if (!ModelState.IsValid)
             {
-                return Ok(loginDTO);
+                return BadRequest(ModelState);
             }
 
             var result = await _signInManager.PasswordSignInAsync(loginDTO.Email, loginDTO.Password,
@@ -124,7 +134,6 @@ namespace APP_API.Controllers
 
             if (result.Succeeded)
             {
-                //Admin
                 ApplicationUser user = await _userManager.FindByEmailAsync(loginDTO.Email);
                 if (user != null)
                 {
@@ -133,35 +142,10 @@ namespace APP_API.Controllers
                         return RedirectToAction("Index", "Home", new { area = "Admin" });
                     }
                 }
-                HttpContext.Session.SetString("UserId", user.Id.ToString());
-                return RedirectToAction("Index", "Home");
-            }
-
-            ModelState.AddModelError("Login", "Email hoặc mật khẩu không hợp lệ");
-            return Ok(loginDTO);
-        }
-
-        [HttpPut("update-user")]
-        public IActionResult UserChatLieu(ApplicationUser user)
-        {
-            try
-            {
-                ApplicationUser? matchingUser = _db.User.FirstOrDefault(temp => temp.Id == user.Id);
-
-                if (matchingUser == null)
-                    throw new ArgumentNullException(nameof(ApplicationUser));
-
-                matchingUser.Email = user.Email;
-                
-
-                _db.User.Update(matchingUser);
-                _db.SaveChanges();
                 return Ok();
             }
-            catch (Exception)
-            {
-                return BadRequest();
-            }
+
+            return BadRequest(ModelState);
         }
     }
 }

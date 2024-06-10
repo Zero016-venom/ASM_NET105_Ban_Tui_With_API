@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\",
+  "WorkspaceRootPath": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_view\\controllers\\taikhoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|e:\\fpt\\1c#\\c#5\\asm\\asmchinh\\asm_net105_ban_tui_with_api\\app_view\\controllers\\taikhoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\controllers\\taikhoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_view\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|e:\\fpt\\1c#\\c#5\\asm\\asmchinh\\asm_net105_ban_tui_with_api\\app_view\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_view\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|e:\\fpt\\1c#\\c#5\\asm\\asmchinh\\asm_net105_ban_tui_with_api\\app_view\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -22,32 +22,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Program.cs",
+              "DocumentMoniker": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Program.cs",
               "RelativeDocumentMoniker": "APP_VIEW\\Program.cs",
-              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Program.cs",
+              "ToolTip": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Program.cs",
               "RelativeToolTip": "APP_VIEW\\Program.cs",
               "ViewState": "AQIAAAUAAABACTMzMzP7vxYAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T09:41:20.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T09:41:20.709Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "TaiKhoanController.cs",
-              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Controllers\\TaiKhoanController.cs",
+              "DocumentMoniker": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Controllers\\TaiKhoanController.cs",
               "RelativeDocumentMoniker": "APP_VIEW\\Controllers\\TaiKhoanController.cs",
-              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Controllers\\TaiKhoanController.cs",
+              "ToolTip": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Controllers\\TaiKhoanController.cs",
               "RelativeToolTip": "APP_VIEW\\Controllers\\TaiKhoanController.cs",
               "ViewState": "AQIAADAAAACAl5mZmRkVwDgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -58,14 +73,27 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "APP_VIEW\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "APP_VIEW\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAA8AAADA7v////8QwDAAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-10T08:46:55.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T08:46:55.902Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 176,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

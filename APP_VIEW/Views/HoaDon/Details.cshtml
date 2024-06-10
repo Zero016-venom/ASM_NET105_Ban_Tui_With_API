@@ -1,0 +1,48 @@
+﻿@model IEnumerable<APP_DATA.Models.HoaDonCT>
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<h3>Hóa đơn chi tiết</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_SanPham)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_HoaDon)
+            </th>
+            <th>
+                @Html.DisplayName("Giá bán")
+            </th>
+            <th>
+                @Html.DisplayName("Số lượng")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID_SanPham)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID_HoaDon)
+                </td>
+                <td>
+                    <p class="card-text"> <b>@string.Format("{0:0,0}", @item.GiaBan) VNĐ</b>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoLuong)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>    
+

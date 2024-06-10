@@ -1,0 +1,75 @@
+﻿@model IEnumerable<APP_DATA.DTO.HoaDonResponce>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("ID Hóa đơn")
+            </th>
+            <th>
+                @Html.DisplayName("Tên khách hàng")
+            </th>
+            <th>
+                @Html.DisplayName("Tổng tiền")
+            </th>
+            <th>
+                @Html.DisplayName("Trạng thái")
+            </th>
+            @*<th>
+            @Html.DisplayName("Phương thức thanh toán")
+            </th>*@
+            <th>
+                @Html.DisplayName("Ngày thanh toán")
+            </th>
+            <th>
+                Tương tác
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID_HoaDon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID_User)
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.TongTien)*@
+                    <p class="card-text"> <b>@string.Format("{0:0,0}", @item.TongTien) VNĐ</b>
+                </td>
+                @if (item.TrangThai == StatusOfBIllOptions.Paid.ToString())
+                {
+                    <td class="badge bg-success">@item.TrangThai</td>
+                }
+                else
+                {
+                    <td class="badge bg-danger">@item.TrangThai</td>
+                }
+                @*<td>
+            @Html.DisplayFor(modelItem => item.ID_PTTT)
+            </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayThanhToan)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.ID_HoaDon" class="btn btn-primary">Chi tiết hóa đơn</a>
+                    <a asp-action="Delete" asp-route-id="@item.ID_HoaDon" class="btn btn-danger">Hủy hóa đơn</a>
+                    <a asp-action="BuyAgain" asp-route-id="@item.ID_HoaDon" class="btn btn-success">Mua lại</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

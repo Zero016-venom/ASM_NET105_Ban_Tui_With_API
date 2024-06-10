@@ -51,6 +51,7 @@ namespace APP_API.Controllers
                     GiaNiemYet = sanPhamAddRequest.GiaNiemYet,
                     ID_ChatLieu = sanPhamAddRequest.ID_ChatLieu,
                     ID_LoaiSP = sanPhamAddRequest.ID_LoaiSP,
+                    Img = sanPhamAddRequest.Img,
                     TrangThai = sanPhamAddRequest.TrangThai.ToString()
                 };
                 _db.SanPham.Add(sanPham);

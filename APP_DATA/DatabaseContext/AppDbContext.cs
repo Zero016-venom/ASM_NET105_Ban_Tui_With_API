@@ -36,7 +36,7 @@ namespace APP_DATA.DatabaseContext
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=ADMIN\\SQLEXPRESS;Database=ASM_NET105;Trusted_Connection=True;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Server=192.168.1.3,1433;Database=NET105;User Id=SA;Password=Password123;TrustServerCertificate=True;");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

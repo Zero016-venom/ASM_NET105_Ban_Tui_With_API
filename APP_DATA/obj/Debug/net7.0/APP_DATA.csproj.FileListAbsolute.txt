@@ -28,3 +28,18 @@ D:\FPT Polytechnic\API_ASM_NET105\APP_DATA\obj\Debug\net7.0\refint\APP_DATA.dll
 D:\FPT Polytechnic\API_ASM_NET105\APP_DATA\obj\Debug\net7.0\APP_DATA.pdb
 D:\FPT Polytechnic\API_ASM_NET105\APP_DATA\obj\Debug\net7.0\APP_DATA.genruntimeconfig.cache
 D:\FPT Polytechnic\API_ASM_NET105\APP_DATA\obj\Debug\net7.0\ref\APP_DATA.dll
+C:\NET105\APP_DATA\bin\Debug\net7.0\APP_DATA.deps.json
+C:\NET105\APP_DATA\bin\Debug\net7.0\APP_DATA.runtimeconfig.json
+C:\NET105\APP_DATA\bin\Debug\net7.0\APP_DATA.dll
+C:\NET105\APP_DATA\bin\Debug\net7.0\APP_DATA.pdb
+C:\NET105\APP_DATA\obj\Debug\net7.0\APP_DATA.csproj.AssemblyReference.cache
+C:\NET105\APP_DATA\obj\Debug\net7.0\APP_DATA.GeneratedMSBuildEditorConfig.editorconfig
+C:\NET105\APP_DATA\obj\Debug\net7.0\APP_DATA.AssemblyInfoInputs.cache
+C:\NET105\APP_DATA\obj\Debug\net7.0\APP_DATA.AssemblyInfo.cs
+C:\NET105\APP_DATA\obj\Debug\net7.0\APP_DATA.csproj.CoreCompileInputs.cache
+C:\NET105\APP_DATA\obj\Debug\net7.0\APP_DATA.sourcelink.json
+C:\NET105\APP_DATA\obj\Debug\net7.0\APP_DATA.dll
+C:\NET105\APP_DATA\obj\Debug\net7.0\refint\APP_DATA.dll
+C:\NET105\APP_DATA\obj\Debug\net7.0\APP_DATA.pdb
+C:\NET105\APP_DATA\obj\Debug\net7.0\APP_DATA.genruntimeconfig.cache
+C:\NET105\APP_DATA\obj\Debug\net7.0\ref\APP_DATA.dll

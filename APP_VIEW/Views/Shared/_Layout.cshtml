@@ -24,24 +24,6 @@
                     </ul>
                     <div class="d-flex justify-content-center w-100">
                         <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="SanPham" asp-action="Index">Sản phẩm</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="LoaiSanPham" asp-action="Index">Loại sản phẩm</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="HoaDon" asp-action="IndexAdmin">Hóa đơn</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="ChatLieu" asp-action="Index">Chất liệu</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Hang" asp-action="Index">Hãng</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="MauSac" asp-action="Index">Màu sắc</a>
-                            </li>
                             @if (User.Identity.IsAuthenticated)
                             {
                                 @if (User.IsInRole("Admin"))
@@ -73,17 +55,16 @@
                                     </li>
                                     <li class="nav-item">
                                         <a asp-action="Index" asp-controller="GioHang" class="nav-link text-dark">
-                                            @*<img src="~/imgs/cart24.png" />*@
+                                            <img src="~/images/cart24.png" />
                                             Giỏ hàng
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a asp-action="Index" asp-controller="HoaDon" class="nav-link text-dark">
-                                            @*<img src="~/imgs/bill24.png" />*@
+                                            <img src="~/images/bill24.png" />
                                             Hóa đơn
                                         </a>
                                     </li>
-
                                 }
                             }
                         </ul>
@@ -98,7 +79,7 @@
 
                             <li class="nav-item">
                                 <a asp-controller="TaiKhoan" asp-action="Logout" class="nav-link text-dark">
-                                    <img src="~/imgs/out24.png"/>
+                                    <img src="~/images/Signout.png"/>
                                 </a>
                             </li>
                         }

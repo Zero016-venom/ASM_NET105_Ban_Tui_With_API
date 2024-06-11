@@ -6,7 +6,9 @@
 
 <h1>Chỉnh sửa loại sản phẩm</h1>
 
-<form asp-action="Edit" method="post">
+<form asp-action="Edit" >
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="ID_LoaiSP" /> <!-- Thêm trường ẩn để giữ lại ID_LoaiSP -->
     <div class="form-group">
         <label asp-for="TenLoaiSP" class="control-label">Tên loại sản phẩm</label>
         <input asp-for="TenLoaiSP" class="form-control" />
@@ -32,15 +34,13 @@
         </select>
     </div>
 
-    <input type="hidden" asp-for="ID_LoaiSP" /> <!-- Thêm trường ẩn để giữ lại ID_LoaiSP -->
-
     <div class="form-group">
         <input type="submit" value="Cập nhật" class="btn btn-warning" />
     </div>
 </form>
 
 <div>
-    <a asp-action="Index">Quay lại danh sách loại sản phẩm</a>
+    <a asp-action="Index" class="btn btn-outline-secondary">Quay lại</a>
 </div>
 
 @section Scripts {

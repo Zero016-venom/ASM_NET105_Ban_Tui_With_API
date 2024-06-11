@@ -4,39 +4,32 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h4>Chi tiết màu</h4>
 
 <div>
-    <h4>MauSacResponse</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ID_MauSac)
+        <dt class="col-sm-2">
+            @Html.DisplayName("Tên màu")
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ID_MauSac)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TenMauSac)
-        </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.TenMauSac)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MoTa)
+        <dt class="col-sm-2">
+            @Html.DisplayName("Mô tả")
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.MoTa)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TrangThai)
+        <dt class="col-sm-2">
+            @Html.DisplayName("Trạng thái")
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.TrangThai)
         </dd>
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
+    @Html.ActionLink("Cập nhật", "Edit", new { id = Model.ID_MauSac }, new { @class = "btn btn-warning" }),
+    <a asp-action="Index" class="btn btn-outline-secondary">Quay lại</a>
 </div>

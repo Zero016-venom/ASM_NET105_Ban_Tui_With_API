@@ -5,14 +5,12 @@
 }
 
 <h3>Chỉnh sửa chất liệu</h3>
-
-<h4>ChatLieuUpdateRequest</h4>
-<hr />
-<hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID_ChatLieu" />
+
             <div class="form-group">
                 <label asp-for="TenChatLieu" class="control-label">Tên chất liệu</label>
                 <input asp-for="TenChatLieu" class="form-control" />
@@ -39,12 +37,11 @@
                 <input type="submit" value="Cập nhật" class="btn btn-warning" />
             </div>
 
-            <input type="hidden" asp-for="ID_ChatLieu" />
         </form>
     </div>
 </div>
 <div>
-    <a asp-action="Index">Quay lại danh sách chất liệu</a>
+    <a asp-action="Index" class="btn btn-outline-secondary">Quay lại</a>
 </div>
 
 @section Scripts {

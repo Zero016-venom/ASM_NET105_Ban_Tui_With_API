@@ -23,7 +23,7 @@ namespace APP_VIEW.Controllers
             }
             else
             {
-                var cartItem = context.GioHangCT.Include(x=>x.SanPham).Where(x=>x.ID_User.ToString() == check);
+                var cartItem = context.GioHangCT.Include(x => x.SanPham).Where(x => x.ID_User.ToString() == check);
                 return View(cartItem);
             }
         }

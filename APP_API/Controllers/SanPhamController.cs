@@ -54,6 +54,7 @@ namespace APP_API.Controllers
                     Img = sanPhamAddRequest.Img,
                     TrangThai = sanPhamAddRequest.TrangThai.ToString()
                 };
+
                 _db.SanPham.Add(sanPham);
                 _db.SaveChanges();
                 return Ok(sanPham.ToSanPhamResponse());
@@ -86,7 +87,7 @@ namespace APP_API.Controllers
 
                 _db.SanPham.Update(matchingSanPham);
                 _db.SaveChanges();
-                return Ok(matchingSanPham.ToSanPhamResponse());
+                return Ok();
             }
             catch (Exception)
             {

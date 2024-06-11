@@ -85,7 +85,7 @@ namespace APP_VIEW.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(SanPhamAddRequest sanPhamAddRequest, IFormFile imgFile)
         {
-            if(imgFile != null && imgFile.Length > 0)
+            if (imgFile != null && imgFile.Length > 0)
             {
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", imgFile.FileName);
                 var steam = new FileStream(path, FileMode.Create);
@@ -152,6 +152,60 @@ namespace APP_VIEW.Controllers
 
             SanPhamResponse sanPhamResponse = await _sanPhamService.UpdateSanPham(sanPhamUpdateRequest);
             return RedirectToAction("Index");
+        }
+
+        public IActionResult AddToCart(Guid id, int quantity)
+        {
+            quantity = 1;
+            var check = HttpContext.Session.GetString("UserId");
+            if (Guid.TryParse(check, out Guid UserId))
+            {
+                if (string.IsNullOrEmpty(check))
+                {
+                    return RedirectToAction("Login", "TaiKhoan");
+                }
+                else
+                {
+                    var cartItem = context.GioHangCT.FirstOrDefault(x => x.ID_User == UserId && x.ID_SanPham == id);
+                    var matchingSanPham = context.SanPham.Find(id);
+
+                    if (cartItem == null)
+                    {
+                        if (matchingSanPham.SoLuongTon <= 0)
+                        {
+                            TempData["Message2"] = "Sản phẩm hết mất rồi!";
+                        }
+                        else
+                        {
+                            GioHangCT gioHangCT = new GioHangCT()
+                            {
+                                ID_GioHangCT = Guid.NewGuid(),
+                                ID_SanPham = id,
+                                SoLuong = quantity,
+                                ID_User = UserId,
+                            };
+                            context.GioHangCT.Add(gioHangCT);
+                            context.SaveChanges();
+                        }
+                    }
+                    else
+                    {
+                        var sanPham = context.SanPham.Find(id);
+
+                        if (cartItem.SoLuong + quantity <= sanPham.SoLuongTon)
+                        {
+                            cartItem.SoLuong = cartItem.SoLuong + quantity;
+                            context.Update(cartItem);
+                        }
+                        else
+                        {
+                            TempData["Message"] = "Đã đạt số lượng tối đa !";
+                        }
+
+                    }
+                }
+            }
+            return RedirectToAction("IndexKH", "SanPham");
         }
 
         public IActionResult AddToCart2(Guid id, int quantity)
@@ -228,7 +282,6 @@ namespace APP_VIEW.Controllers
             {
                 return NotFound();
             }
-
             return View(product);
         }
     }

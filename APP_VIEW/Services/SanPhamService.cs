@@ -47,13 +47,6 @@ namespace APP_VIEW.Services
             var response = _httpClient.GetStringAsync(requestUrl).Result;
             SanPhamResponse? sanPhamResponses = JsonConvert.DeserializeObject<SanPhamResponse>(response);
             return sanPhamResponses;
-
-            //string requestUrl = $"https://localhost:7073/api/SanPham/get-san-pham-by-id?id={id}";
-            //HttpResponseMessage response = await _httpClient.GetAsync(requestUrl);
-
-            //string responseContent = await response.Content.ReadAsStringAsync();
-            //SanPhamResponse? sanPhamResponse = JsonConvert.DeserializeObject<SanPhamResponse>(responseContent);
-            //return sanPhamResponse;
         }
 
         public async Task<SanPhamResponse> UpdateSanPham(SanPhamUpdateRequest? sanPhamUpdateRequest)
@@ -61,9 +54,10 @@ namespace APP_VIEW.Services
             if(sanPhamUpdateRequest == null)
                 throw new ArgumentNullException(nameof(sanPhamUpdateRequest));
             SanPham sanPham = sanPhamUpdateRequest.ToSanPham();
-            string requestUrl = "https://localhost:7073/api/SanPham/update-san-pham-";
+            string requestUrl = "https://localhost:7073/api/SanPham/update-san-pham";
             var response = _httpClient.PutAsJsonAsync(requestUrl, sanPhamUpdateRequest).Result;
             return sanPham.ToSanPhamResponse();
         }
+
     }
 }

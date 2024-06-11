@@ -85,7 +85,7 @@ namespace APP_VIEW.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(SanPhamAddRequest sanPhamAddRequest, IFormFile imgFile)
         {
-            if(imgFile != null && imgFile.Length > 0)
+            if (imgFile != null && imgFile.Length > 0)
             {
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", imgFile.FileName);
                 var steam = new FileStream(path, FileMode.Create);
@@ -228,7 +228,6 @@ namespace APP_VIEW.Controllers
             {
                 return NotFound();
             }
-
             return View(product);
         }
     }

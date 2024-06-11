@@ -51,8 +51,10 @@ namespace APP_API.Controllers
                     GiaNiemYet = sanPhamAddRequest.GiaNiemYet,
                     ID_ChatLieu = sanPhamAddRequest.ID_ChatLieu,
                     ID_LoaiSP = sanPhamAddRequest.ID_LoaiSP,
+                    Img = sanPhamAddRequest.Img,
                     TrangThai = sanPhamAddRequest.TrangThai.ToString()
                 };
+
                 _db.SanPham.Add(sanPham);
                 _db.SaveChanges();
                 return Ok(sanPham.ToSanPhamResponse());
@@ -85,7 +87,7 @@ namespace APP_API.Controllers
 
                 _db.SanPham.Update(matchingSanPham);
                 _db.SaveChanges();
-                return Ok(matchingSanPham.ToSanPhamResponse());
+                return Ok();
             }
             catch (Exception)
             {

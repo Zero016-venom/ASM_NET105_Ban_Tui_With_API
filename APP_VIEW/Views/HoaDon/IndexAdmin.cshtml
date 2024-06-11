@@ -1,0 +1,38 @@
+﻿@model IEnumerable<APP_DATA.Models.HoaDon>
+
+@{
+    ViewData["Title"] = "IndexAdmin";
+}
+
+<h3>Danh sách hóa đơn</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Khách hàng</th>
+            <th>Tổng Tiền</th>
+            <th>Trạng Thái</th>
+            <th>Ngày Thanh Toán</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID_HoaDon</td>
+                <td>@item.User.PersonName</td>
+                <td><p class="card-text"> <b>@string.Format("{0:0,0}", @item.TongTien) VNĐ</b></td>
+                @if (item.TrangThai ==StatusOfBIllOptions.Paid.ToString())
+                {
+                    <td class="badge bg-success">@item.TrangThai</td>
+                }
+                else
+                {
+                    <td class="badge bg-danger">@item.TrangThai</td>
+                }
+                <td>@item.NgayThanhToan.ToString("dd/MM/yyyy")</td>
+            </tr>
+        }
+    </tbody>
+</table>

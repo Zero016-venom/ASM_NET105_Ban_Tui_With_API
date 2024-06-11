@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing.Template;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace APP_API.Controllers
 {
@@ -50,6 +51,7 @@ namespace APP_API.Controllers
                     GiaNiemYet = sanPhamAddRequest.GiaNiemYet,
                     ID_ChatLieu = sanPhamAddRequest.ID_ChatLieu,
                     ID_LoaiSP = sanPhamAddRequest.ID_LoaiSP,
+                    Img = sanPhamAddRequest.Img,
                     TrangThai = sanPhamAddRequest.TrangThai.ToString()
                 };
                 _db.SanPham.Add(sanPham);
@@ -61,6 +63,7 @@ namespace APP_API.Controllers
                 return BadRequest();
             }
         }
+
 
         [HttpPut("update-san-pham")]
         public ActionResult UpdateSanPham(SanPhamUpdateRequest sanPhamUpdateRequest)

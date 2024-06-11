@@ -1,0 +1,82 @@
+﻿@model APP_DATA.DTO.SanPhamResponse
+
+@{
+    ViewData["Title"] = "Details";
+    List<string> extensions = new List<string>() { ".jpg", ".png", ".tiff", ".jepg", ".webp" };
+}
+
+<h4>Chi tiết sản phẩm</h4>
+
+<div>
+    <h4>SanPhamResponse</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayName("Tên sản phẩm")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TenSanPham)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Giá niêm yết")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GiaNiemYet)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Số lượng tồn")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SoLuongTon)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Hãng")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Hang)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Màu sắc")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MauSac)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Chất liệu")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ChatLieu)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Loại sản phẩm")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LoaiSP)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Hình ảnh")
+        </dt>
+        <dd class="col-sm-10">
+            @{
+                var extension = System.IO.Path.GetExtension(Model.Img);
+            }
+            @if (@extensions.Contains(extension))
+            {
+                <div class="img-container d-flex justify-content-start" style="width: 300px; height: 300px;">
+                    <img class="responsive-img" src="~/images/@Model.Img" alt="@Model.TenSanPham" style="object-fit:cover">
+                </div>
+            }
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Trạng thái")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TrangThai)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="IndexKH" class="btn btn-outline-secondary">Quay lại</a> |
+    <a asp-action="AddToCartView" asp-route-id="@Model.ID_SanPham" class="AddToCartButton btn btn-danger">Them vao gio hang</a>
+
+</div>

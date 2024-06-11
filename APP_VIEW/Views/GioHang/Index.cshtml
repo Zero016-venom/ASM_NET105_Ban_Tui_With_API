@@ -1,0 +1,77 @@
+﻿@model IEnumerable<APP_DATA.Models.GioHangCT>
+
+@{
+    ViewData["Title"] = "Index";
+    List<string> extensions = new List<string>() { ".jpg", ".png", ".tiff", ".jpeg", ".webp" };
+    decimal totalAmount = 0;
+}
+
+<h3>Giỏ hàng</h3>
+@if (TempData["Message2"] != null)
+{
+    <div class="alert alert-info">@TempData["Message2"]</div>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th class="w-25">Sản phẩm</th>
+            <th>Hình ảnh</th>
+            <th>Số lượng</th>
+            <th>Tiền</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="w-25">
+                    @Html.DisplayFor(modelItem => item.SanPham.TenSanPham)
+                </td>
+                <td>
+                    <div class="bg-light d-flex justify-content-center">
+                        @{
+                            var extension = System.IO.Path.GetExtension(item.SanPham.Img);
+                        }
+                        @if (extensions.Contains(extension))
+                        {
+                            <div class="img-container d-flex justify-content-center" style="width: 100px; height: 100px;">
+                                <img class="responsive-img" src="~/imgs/@item.SanPham.Img" alt="@item.SanPham.TenSanPham" style="object-fit:cover">
+                            </div>
+                        }
+                    </div>
+                </td>
+                <td>
+                    <form method="post" action="@Url.Action("ThayDoiSoLuong", "GioHang")">
+                        <input type="hidden" name="id" value="@item.ID_GioHangCT" />
+                        <input type="number" name="quantity" class="form-control"
+                               value="@item.SoLuong" min="1" max="@item.SanPham.SoLuongTon"
+                               onchange="this.form.submit()" />
+                                @*để thay đổi giá theo số lượng mỗi khi bấm ra ngoài*@
+                    </form>
+                </td>
+                <td>
+                    @{
+                        var thanhTien = item.SoLuong * item.SanPham.GiaNiemYet;
+                        totalAmount += thanhTien;
+                    }
+                    <p class="card-text"><b class="px-1">@string.Format("{0:0,0}", thanhTien) VNĐ</b></p>
+                </td>
+                <td>
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.ID_GioHangCT }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right"><strong>Tổng tiền:</strong></td>
+            <td>
+                <p class="card-text"><b class="px-1">@string.Format("{0:0,0}", totalAmount) VNĐ</b></p>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+<form method="post" action="@Url.Action("ThanhToan", "GioHang")">
+    <button type="submit" class="btn btn-danger mt-2">Thanh toán</button>
+</form>

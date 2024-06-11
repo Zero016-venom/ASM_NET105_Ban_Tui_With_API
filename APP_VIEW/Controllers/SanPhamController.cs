@@ -1,4 +1,6 @@
-﻿using APP_DATA.DTO;
+﻿using APP_DATA.DatabaseContext;
+using APP_DATA.DTO;
+using APP_DATA.Models;
 using APP_VIEW.IServices;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -13,14 +15,16 @@ namespace APP_VIEW.Controllers
         private readonly IHangService _hangService;
         private readonly IMauSacService _mauSacService;
         private readonly ILoaiSanPhamService _loaiSanPhamService;
+        AppDbContext context;
 
-        public SanPhamController(ISanPhamService sanPhamService, IChatLieuService chatLieuService, IHangService hangService, IMauSacService mauSacService, ILoaiSanPhamService loaiSanPhamService)
+        public SanPhamController(ISanPhamService sanPhamService, IChatLieuService chatLieuService, IHangService hangService, IMauSacService mauSacService, ILoaiSanPhamService loaiSanPhamService, AppDbContext context)
         {
             _sanPhamService = sanPhamService;
             _chatLieuService = chatLieuService;
             _hangService = hangService;
             _mauSacService = mauSacService;
             _loaiSanPhamService = loaiSanPhamService;
+            this.context = context;
         }
 
         public async Task<IActionResult> Index()
@@ -28,8 +32,18 @@ namespace APP_VIEW.Controllers
             List<SanPhamResponse> sanPhamResponses = await _sanPhamService.GetAllSanPhams();
             return View(sanPhamResponses);
         }
-
+        public async Task<IActionResult> IndexKH()
+        {
+            List<SanPhamResponse> sanPhamResponses = await _sanPhamService.GetAllSanPhams();
+            return View(sanPhamResponses);
+        }
         public async Task<IActionResult> Details(Guid id)
+        {
+            SanPhamResponse? sanPhamResponse = await _sanPhamService.GetSanPhamById(id);
+            return View(sanPhamResponse);
+        }
+
+        public async Task<IActionResult> DetailsKH(Guid id)
         {
             SanPhamResponse? sanPhamResponse = await _sanPhamService.GetSanPhamById(id);
             return View(sanPhamResponse);
@@ -138,6 +152,84 @@ namespace APP_VIEW.Controllers
 
             SanPhamResponse sanPhamResponse = await _sanPhamService.UpdateSanPham(sanPhamUpdateRequest);
             return RedirectToAction("Index");
+        }
+
+        public IActionResult AddToCart2(Guid id, int quantity)
+        {
+            var check = HttpContext.Session.GetString("UserId");
+            if (Guid.TryParse(check, out Guid UserId))
+            {
+                if (string.IsNullOrEmpty(check))
+                {
+                    return RedirectToAction("Login", "TaiKhoan");
+                }
+                else
+                {
+                    var cartItem = context.GioHangCT.FirstOrDefault(x => x.ID_User == UserId && x.ID_SanPham == id);
+                    var matchingSanPham = context.SanPham.Find(id);
+
+                    if (cartItem == null)
+                    {
+                        if (matchingSanPham.SoLuongTon <= 0)
+                        {
+                            TempData["Message2"] = "Sản phẩm hết mất rồi!";
+                        }
+                        else
+                        {
+                            // Ktra sluong nhapạ vào 1
+                            if (quantity > matchingSanPham.SoLuongTon)
+                            {
+                                quantity = matchingSanPham.SoLuongTon;
+                                TempData["Message2"] = $"Số lượng nhập vào vượt quá số lượng còn lại. Đã điều chỉnh số lượng thành {quantity}.";
+                            }
+
+                            GioHangCT gioHangCT = new GioHangCT()
+                            {
+                                ID_GioHangCT = Guid.NewGuid(),
+                                ID_SanPham = id,
+                                SoLuong = quantity,
+                                ID_User = UserId,
+                            };
+                            context.GioHangCT.Add(gioHangCT);
+                            context.SaveChanges();
+                        }
+                    }
+                    else
+                    {
+                        var sanPham = context.SanPham.Find(id);
+
+                        // Ktra sluong nhapạ vào 2
+                        if (cartItem.SoLuong + quantity > sanPham.SoLuongTon)
+                        {
+                            quantity = sanPham.SoLuongTon - cartItem.SoLuong;
+                            TempData["Message2"] = $"Số lượng nhập vào vượt quá số lượng còn lại. Đã điều chỉnh số lượng thành {quantity}.";
+                        }
+
+                        if (quantity > 0)
+                        {
+                            cartItem.SoLuong = cartItem.SoLuong + quantity;
+                            context.GioHangCT.Add(cartItem);
+                            context.SaveChanges();
+                        }
+                        else
+                        {
+                            TempData["Message2"] = "Không thể thêm số lượng bằng 0 hoặc âm!";
+                        }
+                    }
+                }
+            }
+            return RedirectToAction("IndexKH", "SanPham");
+        }
+        public IActionResult AddToCartView(Guid id)
+        {
+            // Lấy thông tin sản phẩm từ ID và truyền vào view
+            var product = context.SanPham.FirstOrDefault(p => p.ID_SanPham == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return View(product);
         }
     }
 }

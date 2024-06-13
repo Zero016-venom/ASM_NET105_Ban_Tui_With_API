@@ -4116,19 +4116,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hviet\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_API\\APP_API.csproj",
+      "projectUniqueName": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_API\\APP_API.csproj",
       "projectName": "APP_API",
-      "projectPath": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_API\\APP_API.csproj",
-      "packagesPath": "C:\\Users\\hviet\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_API\\obj\\",
+      "projectPath": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_API\\APP_API.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\hviet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4143,8 +4148,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_DATA\\APP_DATA.csproj": {
-              "projectPath": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_DATA\\APP_DATA.csproj"
+            "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_DATA\\APP_DATA.csproj": {
+              "projectPath": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_DATA\\APP_DATA.csproj"
             }
           }
         }

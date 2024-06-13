@@ -1,18 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\",
+  "WorkspaceRootPath": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_view\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|e:\\fpt\\1c#\\c#5\\asm\\asmchinh\\asm_net105_ban_tui_with_api\\app_view\\views\\hoadon\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\views\\hoadon\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_view\\views\\sanpham\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\views\\sanpham\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|e:\\fpt\\1c#\\c#5\\asm\\asmchinh\\asm_net105_ban_tui_with_api\\app_view\\views\\hoadon\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\views\\hoadon\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|c:\\users\\hviet\\databases\\net105\\asm_net105_ban_tui_withapi\\app_view\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|e:\\fpt\\1c#\\c#5\\asm\\asmchinh\\asm_net105_ban_tui_with_api\\app_view\\controllers\\hoadoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\controllers\\hoadoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|e:\\fpt\\1c#\\c#5\\asm\\asmchinh\\asm_net105_ban_tui_with_api\\app_view\\views\\hoadon\\indexadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\views\\hoadon\\indexadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|e:\\fpt\\1c#\\c#5\\asm\\asmchinh\\asm_net105_ban_tui_with_api\\app_view\\views\\sanpham\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\views\\sanpham\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|e:\\fpt\\1c#\\c#5\\asm\\asmchinh\\asm_net105_ban_tui_with_api\\app_view\\services\\loaisanphamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\services\\loaisanphamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|e:\\fpt\\1c#\\c#5\\asm\\asmchinh\\asm_net105_ban_tui_with_api\\app_view\\controllers\\hangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\controllers\\hangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7013A3F0-51FF-4BFD-B37A-7478E275E119}|APP_DATA\\APP_DATA.csproj|e:\\fpt\\1c#\\c#5\\asm\\asmchinh\\asm_net105_ban_tui_with_api\\app_data\\databasecontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7013A3F0-51FF-4BFD-B37A-7478E275E119}|APP_DATA\\APP_DATA.csproj|solutionrelative:app_data\\databasecontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|e:\\fpt\\1c#\\c#5\\asm\\asmchinh\\asm_net105_ban_tui_with_api\\app_view\\views\\hoadon\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\views\\hoadon\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|e:\\fpt\\1c#\\c#5\\asm\\asmchinh\\asm_net105_ban_tui_with_api\\app_view\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|e:\\fpt\\1c#\\c#5\\asm\\asmchinh\\asm_net105_ban_tui_with_api\\app_view\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|e:\\fpt\\1c#\\c#5\\asm\\asmchinh\\asm_net105_ban_tui_with_api\\app_view\\views\\sanpham\\indexkh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6030714B-9EC5-41AE-8A18-13550A763178}|APP_VIEW\\APP_VIEW.csproj|solutionrelative:app_view\\views\\sanpham\\indexkh.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,50 +58,193 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Views\\SanPham\\Edit.cshtml",
-              "RelativeDocumentMoniker": "APP_VIEW\\Views\\SanPham\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Views\\SanPham\\Edit.cshtml",
-              "RelativeToolTip": "APP_VIEW\\Views\\SanPham\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA9AAAA",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\SanPham\\Create.cshtml",
+              "RelativeDocumentMoniker": "APP_VIEW\\Views\\SanPham\\Create.cshtml",
+              "ToolTip": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\SanPham\\Create.cshtml",
+              "RelativeToolTip": "APP_VIEW\\Views\\SanPham\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-11T07:27:59.034Z",
+              "WhenOpened": "2024-06-11T15:01:33.905Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "LoaiSanPhamService.cs",
+              "DocumentMoniker": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Services\\LoaiSanPhamService.cs",
+              "RelativeDocumentMoniker": "APP_VIEW\\Services\\LoaiSanPhamService.cs",
+              "ToolTip": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Services\\LoaiSanPhamService.cs",
+              "RelativeToolTip": "APP_VIEW\\Services\\LoaiSanPhamService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T14:50:35.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HangController.cs",
+              "DocumentMoniker": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Controllers\\HangController.cs",
+              "RelativeDocumentMoniker": "APP_VIEW\\Controllers\\HangController.cs",
+              "ToolTip": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Controllers\\HangController.cs",
+              "RelativeToolTip": "APP_VIEW\\Controllers\\HangController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T14:03:10.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Views\\SanPham\\Index.cshtml",
-              "RelativeDocumentMoniker": "APP_VIEW\\Views\\SanPham\\Index.cshtml",
-              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Views\\SanPham\\Index.cshtml",
-              "RelativeToolTip": "APP_VIEW\\Views\\SanPham\\Index.cshtml",
-              "ViewState": "AQIAABcAAAAAwMzMzMwXwCIAAAAYAAAA",
+              "DocumentMoniker": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\HoaDon\\Index.cshtml",
+              "RelativeDocumentMoniker": "APP_VIEW\\Views\\HoaDon\\Index.cshtml",
+              "ToolTip": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\HoaDon\\Index.cshtml",
+              "RelativeToolTip": "APP_VIEW\\Views\\HoaDon\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEUAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-11T07:25:36.428Z",
+              "WhenOpened": "2024-06-11T09:01:24.546Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SanPhamController.cs",
-              "DocumentMoniker": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Controllers\\SanPhamController.cs",
-              "RelativeDocumentMoniker": "APP_VIEW\\Controllers\\SanPhamController.cs",
-              "ToolTip": "C:\\Users\\hviet\\Databases\\NET105\\ASM_NET105_BAN_TUI_WithAPI\\APP_VIEW\\Controllers\\SanPhamController.cs",
-              "RelativeToolTip": "APP_VIEW\\Controllers\\SanPhamController.cs",
-              "ViewState": "AQIAAIMAAAAAbJmZmRkawJgAAABoAAAA",
+              "Title": "HoaDonController.cs",
+              "DocumentMoniker": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Controllers\\HoaDonController.cs",
+              "RelativeDocumentMoniker": "APP_VIEW\\Controllers\\HoaDonController.cs",
+              "ToolTip": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Controllers\\HoaDonController.cs",
+              "RelativeToolTip": "APP_VIEW\\Controllers\\HoaDonController.cs",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAswI0AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T02:55:29.46Z",
+              "WhenOpened": "2024-06-11T08:58:48.457Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IndexAdmin.cshtml",
+              "DocumentMoniker": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\HoaDon\\IndexAdmin.cshtml",
+              "RelativeDocumentMoniker": "APP_VIEW\\Views\\HoaDon\\IndexAdmin.cshtml",
+              "ToolTip": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\HoaDon\\IndexAdmin.cshtml",
+              "RelativeToolTip": "APP_VIEW\\Views\\HoaDon\\IndexAdmin.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-11T09:00:28.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\HoaDon\\Details.cshtml",
+              "RelativeDocumentMoniker": "APP_VIEW\\Views\\HoaDon\\Details.cshtml",
+              "ToolTip": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\HoaDon\\Details.cshtml",
+              "RelativeToolTip": "APP_VIEW\\Views\\HoaDon\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-11T09:02:11.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\HoaDon\\Delete.cshtml",
+              "RelativeDocumentMoniker": "APP_VIEW\\Views\\HoaDon\\Delete.cshtml",
+              "ToolTip": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\HoaDon\\Delete.cshtml",
+              "RelativeToolTip": "APP_VIEW\\Views\\HoaDon\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-11T09:02:43.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_DATA\\DatabaseContext\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "APP_DATA\\DatabaseContext\\AppDbContext.cs",
+              "ToolTip": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_DATA\\DatabaseContext\\AppDbContext.cs",
+              "RelativeToolTip": "APP_DATA\\DatabaseContext\\AppDbContext.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAACYAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T08:58:25.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\GioHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "APP_VIEW\\Views\\GioHang\\Index.cshtml",
+              "ToolTip": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\GioHang\\Index.cshtml",
+              "RelativeToolTip": "APP_VIEW\\Views\\GioHang\\Index.cshtml",
+              "ViewState": "AQIAAAIAAACgXmZmZuYswCYAAACKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-11T07:51:12.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IndexKH.cshtml",
+              "DocumentMoniker": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\SanPham\\IndexKH.cshtml",
+              "RelativeDocumentMoniker": "APP_VIEW\\Views\\SanPham\\IndexKH.cshtml",
+              "ToolTip": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Views\\SanPham\\IndexKH.cshtml",
+              "RelativeToolTip": "APP_VIEW\\Views\\SanPham\\IndexKH.cshtml",
+              "ViewState": "AQIAAB0AAADA//////8gwC0AAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-11T07:44:20.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SanPhamController.cs",
+              "DocumentMoniker": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Controllers\\SanPhamController.cs",
+              "RelativeDocumentMoniker": "APP_VIEW\\Controllers\\SanPhamController.cs",
+              "ToolTip": "E:\\FPT\\1c#\\c#5\\ASM\\ASMChinh\\ASM_NET105_Ban_Tui_With_API\\APP_VIEW\\Controllers\\SanPhamController.cs",
+              "RelativeToolTip": "APP_VIEW\\Controllers\\SanPhamController.cs",
+              "ViewState": "AQIAALAAAAAAqDMzMzMLwMEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T07:41:49.384Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 176,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
